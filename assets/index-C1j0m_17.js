@@ -748,20 +748,6 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   position: relative;
   overflow: hidden;
   min-height: 400px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      transparent,
-      rgba(124, 58, 237, 0.03) 20%,
-      rgba(124, 58, 237, 0.03) 80%,
-      transparent
-    );
-    pointer-events: none;
-  }
 `,dA=G(ie.div)`
   max-width: 1200px;
   margin: 0 auto;
