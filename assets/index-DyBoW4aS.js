@@ -112,6 +112,11 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
   position: relative;
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    padding: 1rem;
+    min-height: 80vh;
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -136,6 +141,11 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
     height: 120px;
     border-radius: 50%;
     box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
+
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &::before, &::after {
@@ -174,9 +184,11 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
   transform: translateX(4rem);
 
   @media (max-width: 768px) {
-    font-size: 2.8rem;
-    padding: 0 1rem;
-    transform: translateX(2rem);
+    font-size: 2rem;
+    padding: 0;
+    transform: translateX(0);
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 `,yR=Y(se.img)`
   width: 110px;
@@ -184,6 +196,13 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
   object-fit: contain;
   margin-left: -1rem;
   transform: translateX(-0.5rem);
+
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+    margin-left: 0;
+    transform: none;
+  }
 `,vR=Y(se.span)`
   display: inline-block;
   width: 3px;
@@ -327,6 +346,11 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
   display: flex;
   gap: 2rem;
   opacity: 0.25;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
 `,bR=Y.span`
   display: inline-block;
   padding-right: 4rem;
@@ -335,6 +359,10 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
   background: ${({theme:e})=>e.colors.background};
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 60px 15px;
+  }
 `,MR=Y(se.div)`
   max-width: 1200px;
   margin: 0 auto;
@@ -370,11 +398,13 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
 `,jR=Y(se.div)`
   position: relative;
@@ -384,6 +414,11 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
     height: 120px;
     object-fit: contain;
     margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   h3 {
@@ -392,6 +427,10 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
     background: linear-gradient(to right, #7C3AED, #2563EB);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+    }
   }
 
   p {
@@ -399,6 +438,10 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
     opacity: 0.8;
     font-size: 1rem;
     line-height: 1.5;
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
   }
 `,VR=[{name:"ChatGPT",image:"/WuKonWeb4/Aiphoto/ChatGPT.png",description:"开创性的大语言模型，强大的对话能力"},{name:"Deepseek",image:"/WuKonWeb4/Aiphoto/deepseek.png",description:"专注于深度学习的AI助手，精准的专业解答"},{name:"Gemini",image:"/WuKonWeb4/Aiphoto/gemini.png",description:"Google最新多模态AI，跨领域理解能力"},{name:"Grok",image:"/WuKonWeb4/Aiphoto/Grok.png",description:"实时学习的AI，富有个性的对话风格"},{name:"Kimi",image:"/WuKonWeb4/Aiphoto/kimi.png",description:"注重隐私的AI助手，安全可靠的对话体验"},{name:"Qwen",image:"/WuKonWeb4/Aiphoto/Qwen.png",description:"通义千问，中文理解能力出众的AI模型"}],BR=()=>{const e={hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.2}}},n={hidden:{opacity:0,y:20},visible:{opacity:1,y:0,transition:{duration:.5}}},i={initial:{y:0},animate:{y:[-10,10,-10],transition:{duration:4,repeat:1/0,ease:"easeInOut"}}};return M.jsx(OR,{children:M.jsxs(MR,{variants:e,initial:"hidden",whileInView:"visible",viewport:{once:!0,margin:"-100px"},children:[M.jsx(FR,{variants:n,children:"强大LLM模型"}),M.jsx(IR,{variants:n,children:"集成多个顶尖AI大语言模型，为您提供全方位的智能对话服务。 每个模型都有其独特优势，共同打造极致翻译体验。"}),M.jsx(NR,{children:VR.map((o,a)=>M.jsxs(jR,{variants:n,children:[M.jsx(se.div,{variants:i,initial:"initial",animate:"animate",children:M.jsx("img",{src:o.image,alt:o.name})}),M.jsx("h3",{children:o.name}),M.jsx("p",{children:o.description})]},o.name))})]})})};var Zc=new Map,sa=new WeakMap,Kg=0,zR=void 0;function $R(e){return e?(sa.has(e)||(Kg+=1,sa.set(e,Kg.toString())),sa.get(e)):"0"}function UR(e){return Object.keys(e).sort().filter(n=>e[n]!==void 0).map(n=>`${n}_${n==="root"?$R(e.root):e[n]}`).toString()}function HR(e){const n=UR(e);let i=Zc.get(n);if(!i){const o=new Map;let a;const u=new IntersectionObserver(c=>{c.forEach(d=>{var p;const m=d.isIntersecting&&a.some(g=>d.intersectionRatio>=g);e.trackVisibility&&typeof d.isVisible>"u"&&(d.isVisible=m),(p=o.get(d.target))==null||p.forEach(g=>{g(m,d)})})},e);a=u.thresholds||(Array.isArray(e.threshold)?e.threshold:[e.threshold||0]),i={id:n,observer:u,elements:o},Zc.set(n,i)}return i}function WR(e,n,i={},o=zR){if(typeof window.IntersectionObserver>"u"&&o!==void 0){const p=e.getBoundingClientRect();return n(o,{isIntersecting:o,target:e,intersectionRatio:typeof i.threshold=="number"?i.threshold:0,time:0,boundingClientRect:p,intersectionRect:p,rootBounds:p}),()=>{}}const{id:a,observer:u,elements:c}=HR(i),d=c.get(e)||[];return c.has(e)||c.set(e,d),d.push(n),u.observe(e),function(){d.splice(d.indexOf(n),1),d.length===0&&(c.delete(e),u.unobserve(e)),c.size===0&&(u.disconnect(),Zc.delete(a))}}function Dv({threshold:e,delay:n,trackVisibility:i,rootMargin:o,root:a,triggerOnce:u,skip:c,initialInView:d,fallbackInView:p,onChange:m}={}){var g;const[y,w]=k.useState(null),x=k.useRef(m),[S,T]=k.useState({inView:!!d,entry:void 0});x.current=m,k.useEffect(()=>{if(c||!y)return;let b;return b=WR(y,(B,N)=>{T({inView:B,entry:N}),x.current&&x.current(B,N),N.isIntersecting&&u&&b&&(b(),b=void 0)},{root:a,rootMargin:o,threshold:e,trackVisibility:i,delay:n},p),()=>{b&&b()}},[Array.isArray(e)?e.toString():e,y,a,o,u,c,i,p,n]);const C=(g=S.entry)==null?void 0:g.target,R=k.useRef(void 0);!y&&C&&!u&&!c&&R.current!==C&&(R.current=C,T({inView:!!d,entry:void 0}));const _=[w,S.inView,S.entry];return _.ref=_[0],_.inView=_[1],_.entry=_[2],_}const KR=Y.section`
   padding: 100px 20px;
