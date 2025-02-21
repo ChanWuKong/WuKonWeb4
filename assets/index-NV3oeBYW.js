@@ -543,11 +543,12 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
   
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 `,GR=G(ie.div)`
   position: relative;
@@ -558,6 +559,11 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   border: 1px solid rgba(124, 58, 237, 0.1);
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    padding: 1.2rem;
+    border-radius: 16px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -565,6 +571,10 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
     border-radius: 23px;
     background: linear-gradient(180deg, rgba(124, 58, 237, 0.03), transparent);
     z-index: -1;
+
+    @media (max-width: 768px) {
+      border-radius: 15px;
+    }
   }
 
   &:hover {
@@ -582,6 +592,14 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
 `,YR=G.h3`
   font-size: 1.3rem;
   font-weight: 600;
@@ -589,11 +607,21 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   background: linear-gradient(to right, #7C3AED, #2563EB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
 `,XR=G.p`
   font-size: 1rem;
   line-height: 1.5;
   color: ${({theme:e})=>e.colors.text};
   opacity: 0.8;
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
 `,QR=()=>{const e=[{icon:"🤖",title:"AI翻译",description:"大语言模型驱动，理解更准确"},{icon:"🎯",title:"语境理解",description:"深度分析上下文，翻译更地道"},{icon:"🔄",title:"实时对话",description:"多轮对话实时翻译，交流无阻"},{icon:"✨",title:"智能润色",description:"自动优化表达，文风更自然"},{icon:"📚",title:"专业词库",description:"多领域术语支持，翻译更专业"},{icon:"⚡",title:"极速响应",description:"毫秒级翻译，丝滑体验"}];return _.jsx(UR,{children:_.jsxs(HR,{children:[_.jsx(WR,{children:"强大功能"}),_.jsx(KR,{children:e.map((n,i)=>_.jsxs(GR,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},transition:{duration:.5,delay:i*.1},viewport:{once:!0},children:[_.jsx(qR,{children:n.icon}),_.jsx(YR,{children:n.title}),_.jsx(XR,{children:n.description})]},i))})]})})};var nf=new Map,sa=new WeakMap,Yg=0,JR=void 0;function ZR(e){return e?(sa.has(e)||(Yg+=1,sa.set(e,Yg.toString())),sa.get(e)):"0"}function eA(e){return Object.keys(e).sort().filter(n=>e[n]!==void 0).map(n=>`${n}_${n==="root"?ZR(e.root):e[n]}`).toString()}function tA(e){const n=eA(e);let i=nf.get(n);if(!i){const o=new Map;let a;const u=new IntersectionObserver(c=>{c.forEach(d=>{var p;const m=d.isIntersecting&&a.some(g=>d.intersectionRatio>=g);e.trackVisibility&&typeof d.isVisible>"u"&&(d.isVisible=m),(p=o.get(d.target))==null||p.forEach(g=>{g(m,d)})})},e);a=u.thresholds||(Array.isArray(e.threshold)?e.threshold:[e.threshold||0]),i={id:n,observer:u,elements:o},nf.set(n,i)}return i}function nA(e,n,i={},o=JR){if(typeof window.IntersectionObserver>"u"&&o!==void 0){const p=e.getBoundingClientRect();return n(o,{isIntersecting:o,target:e,intersectionRatio:typeof i.threshold=="number"?i.threshold:0,time:0,boundingClientRect:p,intersectionRect:p,rootBounds:p}),()=>{}}const{id:a,observer:u,elements:c}=tA(i),d=c.get(e)||[];return c.has(e)||c.set(e,d),d.push(n),u.observe(e),function(){d.splice(d.indexOf(n),1),d.length===0&&(c.delete(e),u.unobserve(e)),c.size===0&&(u.disconnect(),nf.delete(a))}}function rA({threshold:e,delay:n,trackVisibility:i,rootMargin:o,root:a,triggerOnce:u,skip:c,initialInView:d,fallbackInView:p,onChange:m}={}){var g;const[y,x]=T.useState(null),w=T.useRef(m),[S,k]=T.useState({inView:!!d,entry:void 0});w.current=m,T.useEffect(()=>{if(c||!y)return;let D;return D=nA(y,(V,j)=>{k({inView:V,entry:j}),w.current&&w.current(V,j),j.isIntersecting&&u&&D&&(D(),D=void 0)},{root:a,rootMargin:o,threshold:e,trackVisibility:i,delay:n},p),()=>{D&&D()}},[Array.isArray(e)?e.toString():e,y,a,o,u,c,i,p,n]);const C=(g=S.entry)==null?void 0:g.target,R=T.useRef(void 0);!y&&C&&!u&&!c&&R.current!==C&&(R.current=C,k({inView:!!d,entry:void 0}));const M=[x,S.inView,S.entry];return M.ref=M[0],M.inView=M[1],M.entry=M[2],M}const iA=[{icon:"✈️",name:"出国旅游",description:"实时翻译，畅游无阻"},{icon:"🌐",name:"外贸交流",description:"商务沟通无障碍"},{icon:"🤝",name:"商务洽谈",description:"专业用语精准翻译"},{icon:"💬",name:"即时翻译",description:"随说随译，零等待"}],oA=G.section`
   padding: 100px 20px;
   background: linear-gradient(180deg, ${({theme:e})=>e.colors.background} 0%, rgba(124, 58, 237, 0.05) 100%);
