@@ -111,12 +111,12 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  padding-top: calc(60px + 2rem);
+  padding-top: calc(80px + 2rem);
   
   @media (max-width: 768px) {
     padding: 1rem;
     min-height: 80vh;
-    padding-top: calc(40px + 1rem);
+    padding-top: calc(60px + 2rem);
   }
   
   &::before {
@@ -133,10 +133,16 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
   text-align: center;
   z-index: 1;
   max-width: 1000px;
+  padding-top: 1rem;
+  
+  @media (max-width: 768px) {
+    padding-top: 2rem;
+  }
 `,mR=G(ie.div)`
   margin-bottom: 2rem;
   position: relative;
   display: inline-block;
+  margin-top: 2rem;
   
   img {
     width: 120px;
@@ -147,6 +153,7 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
     @media (max-width: 768px) {
       width: 80px;
       height: 80px;
+      margin-top: 1rem;
     }
   }
 
@@ -691,9 +698,11 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
   background: rgba(5, 5, 5, 0.8);
   backdrop-filter: blur(10px);
   z-index: 100;
+  height: 80px;
 
   @media (max-width: 768px) {
     padding: 0.8rem 1rem;
+    height: 60px;
   }
 `,DA=G.div`
   font-size: 1.5rem;
@@ -708,10 +717,10 @@ Please change the parent <Route path="${b}"> to <Route path="${b==="/"?"*":`${b}
   }
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     
     img {
-      height: 24px;
+      height: 22px;
     }
   }
 `,bA=G(ie.button)`
