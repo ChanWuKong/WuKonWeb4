@@ -1080,6 +1080,8 @@ to {
   overflow-x: hidden;
   position: relative;
   z-index: 0;
+  display: flex;
+  flex-direction: column;
 `,q4=K.div`
   max-width: 800px;
   margin: 0 auto;
@@ -1087,6 +1089,7 @@ to {
   padding: 0 15px;
   position: relative;
   z-index: 1;
+  flex: 1;
 
   @media (max-width: 768px) {
     padding: 0 10px;
@@ -1105,10 +1108,10 @@ to {
     margin-bottom: 1.5rem;
   }
 `,Wt=K.div`
-  margin-bottom: 2rem;
+  margin-bottom: ${({isLast:t})=>t?"0":"2rem"};
 
   @media (max-width: 768px) {
-    margin-bottom: 1.5rem;
+    margin-bottom: ${({isLast:t})=>t?"0":"1.5rem"};
   }
 `,Ht=K.h2`
   font-size: 1.8rem;
@@ -1147,7 +1150,7 @@ to {
     font-size: 1rem;
     line-height: 1.6;
   }
-`,J4=()=>A.jsxs(X4,{children:[A.jsx(ja,{}),A.jsxs(q4,{children:[A.jsx(Z4,{children:"筋斗云隐私政策"}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"引言"}),A.jsx(jt,{children:"感谢您使用筋斗云翻译。本隐私政策旨在帮助您了解我们如何收集、使用、存储和保护您的个人信息， 以及您享有的相关权利。我们建议您完整地阅读本隐私政策，以帮助您更好地保护您的隐私权。"}),A.jsx(jt,{children:"如果您不同意本隐私政策的任何内容，您应该立即停止使用本服务。当您使用我们的服务时， 即表示您已经同意我们按照本隐私政策收集、使用、存储和保护您的相关信息。"})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"信息收集"}),A.jsx(jt,{children:"为了提供更好的服务，我们会收集以下信息："}),A.jsxs(fr,{children:[A.jsxs(Ce,{children:[A.jsx("strong",{children:"手机号码："}),"用于用户注册、账号验证和安全认证，这是使用我们服务所必需的信息"]}),A.jsxs(Ce,{children:[A.jsx("strong",{children:"设备信息："}),"包括设备型号、操作系统版本、设备设置、唯一设备标识符等，用于优化服务体验"]}),A.jsxs(Ce,{children:[A.jsx("strong",{children:"使用数据："}),"包括您使用的语言类型、翻译频率、功能使用情况等，用于改进翻译服务质量"]}),A.jsxs(Ce,{children:[A.jsx("strong",{children:"网络数据："}),"包括IP地址、网络连接类型、浏览器类型等，用于确保服务的安全性和可用性"]})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"信息使用"}),A.jsx(jt,{children:"我们收集的信息将用于以下目的："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"提供核心翻译服务和相关功能"}),A.jsx(Ce,{children:"验证用户身份，保障账号安全"}),A.jsx(Ce,{children:"发送服务通知和更新提醒"}),A.jsx(Ce,{children:"优化和改进翻译算法和服务质量"}),A.jsx(Ce,{children:"分析服务使用情况，改进用户体验"}),A.jsx(Ce,{children:"预防和处理欺诈等安全问题"}),A.jsx(Ce,{children:"响应您的问题咨询和反馈建议"})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"信息存储"}),A.jsx(jt,{children:"我们会采取以下措施存储和保护您的信息："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"所有数据存储在中国境内的服务器上"}),A.jsx(Ce,{children:"采用业界标准的加密技术保护数据传输和存储"}),A.jsx(Ce,{children:"定期备份数据，确保服务的可靠性"}),A.jsx(Ce,{children:"仅授权人员可访问用户数据，并签署保密协议"})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"信息保护"}),A.jsx(jt,{children:"我们高度重视您的信息安全，采取多重措施保护您的隐私："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"数据传输加密：使用SSL/TLS加密技术保护数据传输"}),A.jsx(Ce,{children:"访问控制：实施严格的数据访问控制机制"}),A.jsx(Ce,{children:"安全审计：定期进行安全评估和审计"}),A.jsx(Ce,{children:"应急响应：建立数据安全应急响应机制"})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"信息共享"}),A.jsx(jt,{children:"我们承诺对您的信息进行严格保密，除以下情况外，不会与任何第三方分享您的个人信息："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"获得您的明确同意"}),A.jsx(Ce,{children:"法律法规要求披露"}),A.jsx(Ce,{children:"应国家相关部门的要求"}),A.jsx(Ce,{children:"为维护我们的合法权益所必需"})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"您的权利"}),A.jsx(jt,{children:"根据相关法律法规，您享有以下权利："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"访问、更正或删除您的个人信息"}),A.jsx(Ce,{children:"撤回您的同意授权"}),A.jsx(Ce,{children:"注销您的账号"}),A.jsx(Ce,{children:"投诉举报违法违规行为"})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"Cookie 使用"}),A.jsx(jt,{children:"我们使用 Cookie 和类似技术来提供、保护和改进我们的服务。这些技术帮助我们记住您的偏好设置， 理解您如何使用我们的服务，并据此进行优化。"})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"儿童隐私"}),A.jsx(jt,{children:"我们的服务不面向13岁以下的儿童。如果您是儿童的父母或监护人，请您关注并指导儿童正确使用我们的服务。 如果我们发现自己在未事先获得可证实的父母同意的情况下收集了儿童的个人信息，则会设法尽快删除相关数据。"})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"隐私政策更新"}),A.jsx(jt,{children:"我们可能会不时更新本隐私政策。如有重大变更，我们会在应用中显著位置提供通知。继续使用我们的服务， 即表示您同意受经修订的隐私政策的约束。"})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"联系我们"}),A.jsx(jt,{children:"如果您对本隐私政策有任何疑问、意见或建议，欢迎通过以下方式与我们联系："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"电子邮箱：cming0185@gmail.com"}),A.jsx(Ce,{children:"响应时间：我们会在收到您的询问后的7个工作日内回复"})]})]})]})]}),e2=K.footer`
+`,J4=()=>A.jsxs(X4,{children:[A.jsx(ja,{}),A.jsxs(q4,{children:[A.jsx(Z4,{children:"筋斗云隐私政策"}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"引言"}),A.jsx(jt,{children:"感谢您使用筋斗云翻译。本隐私政策旨在帮助您了解我们如何收集、使用、存储和保护您的个人信息， 以及您享有的相关权利。我们建议您完整地阅读本隐私政策，以帮助您更好地保护您的隐私权。"}),A.jsx(jt,{children:"如果您不同意本隐私政策的任何内容，您应该立即停止使用本服务。当您使用我们的服务时， 即表示您已经同意我们按照本隐私政策收集、使用、存储和保护您的相关信息。"})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"信息收集"}),A.jsx(jt,{children:"为了提供更好的服务，我们会收集以下信息："}),A.jsxs(fr,{children:[A.jsxs(Ce,{children:[A.jsx("strong",{children:"手机号码："}),"用于用户注册、账号验证和安全认证，这是使用我们服务所必需的信息"]}),A.jsxs(Ce,{children:[A.jsx("strong",{children:"设备信息："}),"包括设备型号、操作系统版本、设备设置、唯一设备标识符等，用于优化服务体验"]}),A.jsxs(Ce,{children:[A.jsx("strong",{children:"使用数据："}),"包括您使用的语言类型、翻译频率、功能使用情况等，用于改进翻译服务质量"]}),A.jsxs(Ce,{children:[A.jsx("strong",{children:"网络数据："}),"包括IP地址、网络连接类型、浏览器类型等，用于确保服务的安全性和可用性"]})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"信息使用"}),A.jsx(jt,{children:"我们收集的信息将用于以下目的："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"提供核心翻译服务和相关功能"}),A.jsx(Ce,{children:"验证用户身份，保障账号安全"}),A.jsx(Ce,{children:"发送服务通知和更新提醒"}),A.jsx(Ce,{children:"优化和改进翻译算法和服务质量"}),A.jsx(Ce,{children:"分析服务使用情况，改进用户体验"}),A.jsx(Ce,{children:"预防和处理欺诈等安全问题"}),A.jsx(Ce,{children:"响应您的问题咨询和反馈建议"})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"信息存储"}),A.jsx(jt,{children:"我们会采取以下措施存储和保护您的信息："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"所有数据存储在中国境内的服务器上"}),A.jsx(Ce,{children:"采用业界标准的加密技术保护数据传输和存储"}),A.jsx(Ce,{children:"定期备份数据，确保服务的可靠性"}),A.jsx(Ce,{children:"仅授权人员可访问用户数据，并签署保密协议"})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"信息保护"}),A.jsx(jt,{children:"我们高度重视您的信息安全，采取多重措施保护您的隐私："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"数据传输加密：使用SSL/TLS加密技术保护数据传输"}),A.jsx(Ce,{children:"访问控制：实施严格的数据访问控制机制"}),A.jsx(Ce,{children:"安全审计：定期进行安全评估和审计"}),A.jsx(Ce,{children:"应急响应：建立数据安全应急响应机制"})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"信息共享"}),A.jsx(jt,{children:"我们承诺对您的信息进行严格保密，除以下情况外，不会与任何第三方分享您的个人信息："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"获得您的明确同意"}),A.jsx(Ce,{children:"法律法规要求披露"}),A.jsx(Ce,{children:"应国家相关部门的要求"}),A.jsx(Ce,{children:"为维护我们的合法权益所必需"})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"您的权利"}),A.jsx(jt,{children:"根据相关法律法规，您享有以下权利："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"访问、更正或删除您的个人信息"}),A.jsx(Ce,{children:"撤回您的同意授权"}),A.jsx(Ce,{children:"注销您的账号"}),A.jsx(Ce,{children:"投诉举报违法违规行为"})]})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"Cookie 使用"}),A.jsx(jt,{children:"我们使用 Cookie 和类似技术来提供、保护和改进我们的服务。这些技术帮助我们记住您的偏好设置， 理解您如何使用我们的服务，并据此进行优化。"})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"儿童隐私"}),A.jsx(jt,{children:"我们的服务不面向13岁以下的儿童。如果您是儿童的父母或监护人，请您关注并指导儿童正确使用我们的服务。 如果我们发现自己在未事先获得可证实的父母同意的情况下收集了儿童的个人信息，则会设法尽快删除相关数据。"})]}),A.jsxs(Wt,{children:[A.jsx(Ht,{children:"隐私政策更新"}),A.jsx(jt,{children:"我们可能会不时更新本隐私政策。如有重大变更，我们会在应用中显著位置提供通知。继续使用我们的服务， 即表示您同意受经修订的隐私政策的约束。"})]}),A.jsxs(Wt,{isLast:!0,children:[A.jsx(Ht,{children:"联系我们"}),A.jsx(jt,{children:"如果您对本隐私政策有任何疑问、意见或建议，欢迎通过以下方式与我们联系："}),A.jsxs(fr,{children:[A.jsx(Ce,{children:"电子邮箱：cming0185@gmail.com"}),A.jsx(Ce,{children:"响应时间：我们会在收到您的询问后的7个工作日内回复"})]})]})]})]}),e2=K.footer`
   padding: 20px;
   background: ${({theme:t})=>t.colors.background};
   border-top: 1px solid rgba(124, 58, 237, 0.1);
