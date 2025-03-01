@@ -56,7 +56,7 @@ Error generating stack: `+d.message+`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: #050505;
-    color: #ffffff;
+    color:rgb(0, 0, 0);
     overflow-x: hidden;
     min-height: 100vh;
     width: 100%;
