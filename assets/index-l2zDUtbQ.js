@@ -473,7 +473,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
 `,JF=I.div`
   max-width: 1200px;
   margin: 0 auto;
-`,eS=I(X.h2)`
+`,e2=I(X.h2)`
   font-size: 3rem;
   text-align: center;
   background: linear-gradient(to right, #7C3AED, #2563EB);
@@ -486,7 +486,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     font-size: 2rem;
     margin-bottom: 2rem;
   }
-`,tS=I.div`
+`,t2=I.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -500,7 +500,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-`,nS=I(X.div)`
+`,n2=I(X.div)`
   position: relative;
   padding: 2rem;
   border-radius: 24px;
@@ -532,7 +532,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     transform: translateY(-5px);
     transition: all 0.3s ease;
   }
-`,rS=I.div`
+`,r2=I.div`
   width: 50px;
   height: 50px;
   border-radius: 15px;
@@ -550,7 +550,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     margin-bottom: 1rem;
     font-size: 1.2rem;
   }
-`,iS=I.h3`
+`,i2=I.h3`
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
@@ -562,7 +562,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
-`,oS=I.p`
+`,o2=I.p`
   font-size: 1rem;
   line-height: 1.5;
   color: ${({theme:t})=>t.colors.text};
@@ -572,15 +572,15 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     font-size: 0.85rem;
     line-height: 1.4;
   }
-`,sS=()=>{const t=[{icon:"✍️",title:"文字润色",description:"AI智能润色，让表达更优雅精准"},{icon:"🌍",title:"外语翻译",description:"40+语言实时翻译，无障碍沟通"},{icon:"🎲",title:"天外之音",description:"盲盒匹配外语聊天，趣味学习"},{icon:"👽",title:"语音交流",description:"外星人音效，探索语言新乐趣"},{icon:"🤖",title:"AI助手",description:"智能对话，帮你解决语言难题"},{icon:"��",title:"极速响应",description:"毫秒级翻译，丝滑交流体验"}];return w.jsx(ZF,{children:w.jsxs(JF,{children:[w.jsx(eS,{children:"强大功能"}),w.jsx(tS,{children:t.map((r,i)=>w.jsxs(nS,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},transition:{duration:.5,delay:i*.1},viewport:{once:!0},children:[w.jsx(rS,{children:r.icon}),w.jsx(iS,{children:r.title}),w.jsx(oS,{children:r.description})]},i))})]})})};var Yc=new Map,oa=new WeakMap,B0=0,aS=void 0;function uS(t){return t?(oa.has(t)||(B0+=1,oa.set(t,B0.toString())),oa.get(t)):"0"}function lS(t){return Object.keys(t).sort().filter(r=>t[r]!==void 0).map(r=>`${r}_${r==="root"?uS(t.root):t[r]}`).toString()}function cS(t){const r=lS(t);let i=Yc.get(r);if(!i){const s=new Map;let u;const l=new IntersectionObserver(d=>{d.forEach(f=>{var h;const m=f.isIntersecting&&u.some(g=>f.intersectionRatio>=g);t.trackVisibility&&typeof f.isVisible>"u"&&(f.isVisible=m),(h=s.get(f.target))==null||h.forEach(g=>{g(m,f)})})},t);u=l.thresholds||(Array.isArray(t.threshold)?t.threshold:[t.threshold||0]),i={id:r,observer:l,elements:s},Yc.set(r,i)}return i}function dS(t,r,i={},s=aS){if(typeof window.IntersectionObserver>"u"&&s!==void 0){const h=t.getBoundingClientRect();return r(s,{isIntersecting:s,target:t,intersectionRatio:typeof i.threshold=="number"?i.threshold:0,time:0,boundingClientRect:h,intersectionRect:h,rootBounds:h}),()=>{}}const{id:u,observer:l,elements:d}=cS(i),f=d.get(t)||[];return d.has(t)||d.set(t,f),f.push(r),l.observe(t),function(){f.splice(f.indexOf(r),1),f.length===0&&(d.delete(t),l.unobserve(t)),d.size===0&&(l.disconnect(),Yc.delete(u))}}function fS({threshold:t,delay:r,trackVisibility:i,rootMargin:s,root:u,triggerOnce:l,skip:d,initialInView:f,fallbackInView:h,onChange:m}={}){var g;const[v,x]=C.useState(null),E=C.useRef(m),[S,P]=C.useState({inView:!!f,entry:void 0});E.current=m,C.useEffect(()=>{if(d||!v)return;let j;return j=dS(v,($,_)=>{P({inView:$,entry:_}),E.current&&E.current($,_),_.isIntersecting&&l&&j&&(j(),j=void 0)},{root:u,rootMargin:s,threshold:t,trackVisibility:i,delay:r},h),()=>{j&&j()}},[Array.isArray(t)?t.toString():t,v,u,s,l,d,i,h,r]);const T=(g=S.entry)==null?void 0:g.target,k=C.useRef(void 0);!v&&T&&!l&&!d&&k.current!==T&&(k.current=T,P({inView:!!f,entry:void 0}));const L=[x,S.inView,S.entry];return L.ref=L[0],L.inView=L[1],L.entry=L[2],L}const pS=I.section`
+`,s2=()=>{const t=[{icon:"✍️",title:"文字润色",description:"AI智能润色，让表达更优雅精准"},{icon:"🌍",title:"外语翻译",description:"40+语言实时翻译，无障碍沟通"},{icon:"🎲",title:"天外之音",description:"盲盒匹配外语聊天，趣味学习"},{icon:"👽",title:"语音交流",description:"外星人音效，探索语言新乐趣"},{icon:"🤖",title:"AI助手",description:"智能对话，帮你解决语言难题"},{icon:"��",title:"极速响应",description:"毫秒级翻译，丝滑交流体验"}];return w.jsx(ZF,{children:w.jsxs(JF,{children:[w.jsx(e2,{children:"强大功能"}),w.jsx(t2,{children:t.map((r,i)=>w.jsxs(n2,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},transition:{duration:.5,delay:i*.1},viewport:{once:!0},children:[w.jsx(r2,{children:r.icon}),w.jsx(i2,{children:r.title}),w.jsx(o2,{children:r.description})]},i))})]})})};var Yc=new Map,oa=new WeakMap,B0=0,a2=void 0;function u2(t){return t?(oa.has(t)||(B0+=1,oa.set(t,B0.toString())),oa.get(t)):"0"}function l2(t){return Object.keys(t).sort().filter(r=>t[r]!==void 0).map(r=>`${r}_${r==="root"?u2(t.root):t[r]}`).toString()}function c2(t){const r=l2(t);let i=Yc.get(r);if(!i){const s=new Map;let u;const l=new IntersectionObserver(d=>{d.forEach(f=>{var h;const m=f.isIntersecting&&u.some(g=>f.intersectionRatio>=g);t.trackVisibility&&typeof f.isVisible>"u"&&(f.isVisible=m),(h=s.get(f.target))==null||h.forEach(g=>{g(m,f)})})},t);u=l.thresholds||(Array.isArray(t.threshold)?t.threshold:[t.threshold||0]),i={id:r,observer:l,elements:s},Yc.set(r,i)}return i}function d2(t,r,i={},s=a2){if(typeof window.IntersectionObserver>"u"&&s!==void 0){const h=t.getBoundingClientRect();return r(s,{isIntersecting:s,target:t,intersectionRatio:typeof i.threshold=="number"?i.threshold:0,time:0,boundingClientRect:h,intersectionRect:h,rootBounds:h}),()=>{}}const{id:u,observer:l,elements:d}=c2(i),f=d.get(t)||[];return d.has(t)||d.set(t,f),f.push(r),l.observe(t),function(){f.splice(f.indexOf(r),1),f.length===0&&(d.delete(t),l.unobserve(t)),d.size===0&&(l.disconnect(),Yc.delete(u))}}function f2({threshold:t,delay:r,trackVisibility:i,rootMargin:s,root:u,triggerOnce:l,skip:d,initialInView:f,fallbackInView:h,onChange:m}={}){var g;const[v,x]=C.useState(null),E=C.useRef(m),[S,P]=C.useState({inView:!!f,entry:void 0});E.current=m,C.useEffect(()=>{if(d||!v)return;let j;return j=d2(v,($,_)=>{P({inView:$,entry:_}),E.current&&E.current($,_),_.isIntersecting&&l&&j&&(j(),j=void 0)},{root:u,rootMargin:s,threshold:t,trackVisibility:i,delay:r},h),()=>{j&&j()}},[Array.isArray(t)?t.toString():t,v,u,s,l,d,i,h,r]);const T=(g=S.entry)==null?void 0:g.target,k=C.useRef(void 0);!v&&T&&!l&&!d&&k.current!==T&&(k.current=T,P({inView:!!f,entry:void 0}));const L=[x,S.inView,S.entry];return L.ref=L[0],L.inView=L[1],L.entry=L[2],L}const p2=I.section`
   padding: 80px 20px;
   background: ${({theme:t})=>t.colors.background};
   position: relative;
   overflow: hidden;
-`,hS=I.div`
+`,h2=I.div`
   max-width: 1200px;
   margin: 0 auto;
-`,mS=I.div`
+`,m2=I.div`
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 4rem;
@@ -590,11 +590,11 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-`,gS=I.div`
+`,g2=I.div`
   @media (max-width: 768px) {
   text-align: center;
   }
-`,yS=I(X.h2)`
+`,y2=I(X.h2)`
   font-size: 3rem;
   font-weight: 700;
   background: linear-gradient(to right, #7C3AED, #2563EB);
@@ -605,13 +605,13 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
   @media (max-width: 768px) {
     font-size: 2rem;
   }
-`,vS=I(X.p)`
+`,v2=I(X.p)`
   font-size: 1.2rem;
   color: ${({theme:t})=>t.colors.text};
   opacity: 0.8;
   line-height: 1.8;
   margin-bottom: 2rem;
-`,xS=I(X.div)`
+`,x2=I(X.div)`
   position: relative;
   
   img {
@@ -634,13 +634,13 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     );
     pointer-events: none;
   }
-`,wS=()=>{const[t,r]=fS({threshold:.3,triggerOnce:!0});return w.jsx(pS,{ref:t,children:w.jsx(hS,{children:w.jsxs(mS,{children:[w.jsxs(gS,{children:[w.jsx(yS,{initial:{opacity:0,y:20},animate:r?{opacity:1,y:0}:{},transition:{duration:.6},children:"40国语言即时交流"}),w.jsx(vS,{initial:{opacity:0,y:20},animate:r?{opacity:1,y:0}:{},transition:{duration:.6,delay:.2},children:"覆盖全球主要语种，从英语、日语到阿拉伯语，让你畅通无阻地与世界对话。 智能识别语言，一键切换目标语种，让跨语言交流变得轻松自如。"})]}),w.jsx(xS,{initial:{opacity:0,scale:.8,rotateY:-20},animate:r?{opacity:1,scale:1,rotateY:0}:{},transition:{type:"spring",duration:1,bounce:.4},whileHover:{scale:1.05,rotateY:5,transition:{duration:.3}},children:w.jsx("img",{src:"/WuKonWeb4/assets/lang.png",alt:"支持的语言"})})]})})})},ES=I.section`
+`,w2=()=>{const[t,r]=f2({threshold:.3,triggerOnce:!0});return w.jsx(p2,{ref:t,children:w.jsx(h2,{children:w.jsxs(m2,{children:[w.jsxs(g2,{children:[w.jsx(y2,{initial:{opacity:0,y:20},animate:r?{opacity:1,y:0}:{},transition:{duration:.6},children:"40国语言即时交流"}),w.jsx(v2,{initial:{opacity:0,y:20},animate:r?{opacity:1,y:0}:{},transition:{duration:.6,delay:.2},children:"覆盖全球主要语种，从英语、日语到阿拉伯语，让你畅通无阻地与世界对话。 智能识别语言，一键切换目标语种，让跨语言交流变得轻松自如。"})]}),w.jsx(x2,{initial:{opacity:0,scale:.8,rotateY:-20},animate:r?{opacity:1,scale:1,rotateY:0}:{},transition:{type:"spring",duration:1,bounce:.4},whileHover:{scale:1.05,rotateY:5,transition:{duration:.3}},children:w.jsx("img",{src:"/WuKonWeb4/assets/lang.png",alt:"支持的语言"})})]})})})},E2=I.section`
   padding: 100px 20px;
   background: linear-gradient(0deg, ${({theme:t})=>t.colors.background} 0%, rgba(124, 58, 237, 0.1) 100%);
-`,CS=I.div`
+`,C2=I.div`
   max-width: 800px;
   margin: 0 auto;
-`,FS=I(X.h2)`
+`,F2=I(X.h2)`
   font-size: 2.5rem;
   text-align: center;
   background: linear-gradient(to right, #7C3AED, #2563EB);
@@ -651,9 +651,9 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
   @media (max-width: 768px) {
     font-size: 2rem;
   }
-`,SS=I(X.div)`
+`,S2=I(X.div)`
   margin-bottom: 20px;
-`,DS=I(X.button)`
+`,D2=I(X.button)`
   width: 100%;
   text-align: left;
   padding: 20px;
@@ -676,7 +676,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
     font-size: 1rem;
     padding: 15px;
   }
-`,AS=I(X.div)`
+`,A2=I(X.div)`
   padding: 0 20px;
   color: ${({theme:t})=>t.colors.gray};
   line-height: 1.6;
@@ -685,7 +685,7 @@ Please change the parent <Route path="${j}"> to <Route path="${j==="/"?"*":`${j}
   @media (max-width: 768px) {
     padding: 0 15px;
   }
-`,kS=()=>{const[t,r]=C.useState(null),i=[{question:"筋斗云支持哪些语言？",answer:"筋斗云支持超过40个国家和地区的语言，覆盖全球主要语种，让你随时随地都能畅通无阻地进行交流。"},{question:"天外之音功能是什么？",answer:"天外之音是一个创新的语言学习功能，通过盲盒模式随机匹配外语伙伴，让你在趣味聊天中自然提升语言能力。"},{question:"文字润色功能如何使用？",answer:"就像有一位专业的语文老师，筋斗云能智能分析你的文字，提供更优雅、更地道的表达建议，适用于作文、报告等场景。"},{question:"外星人语音交流是什么？",answer:"这是一个趣味性的语音功能，可以为你的语音添加有趣的外星人音效，让语言学习和交流变得更加有趣。"}],s=d=>{r(t===d?null:d)},u={hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.1}}},l={hidden:{opacity:0,x:-30},visible:{opacity:1,x:0,transition:{duration:.5}}};return w.jsx(ES,{children:w.jsxs(CS,{as:X.div,variants:u,initial:"hidden",whileInView:"visible",viewport:{once:!0,margin:"-100px"},children:[w.jsx(FS,{variants:l,children:"常见问题"}),i.map((d,f)=>w.jsxs(SS,{variants:l,children:[w.jsxs(DS,{onClick:()=>s(f),whileTap:{scale:.98},children:[d.question,w.jsx(X.span,{animate:{rotate:t===f?180:0},transition:{duration:.3},children:"▼"})]}),w.jsx(Oa,{children:t===f&&w.jsx(AS,{initial:{height:0,opacity:0},animate:{height:"auto",opacity:1},exit:{height:0,opacity:0},transition:{duration:.3},children:w.jsx("p",{children:d.answer})})})]},f))]})})};let BS={data:""},TS=t=>typeof window=="object"?((t?t.querySelector("#_goober"):window._goober)||Object.assign((t||document.head).appendChild(document.createElement("style")),{innerHTML:" ",id:"_goober"})).firstChild:t||BS,PS=/(?:([\u0080-\uFFFF\w-%@]+) *:? *([^{;]+?);|([^;}{]*?) *{)|(}\s*)/g,RS=/\/\*[^]*?\*\/|  +/g,T0=/\n+/g,Wn=(t,r)=>{let i="",s="",u="";for(let l in t){let d=t[l];l[0]=="@"?l[1]=="i"?i=l+" "+d+";":s+=l[1]=="f"?Wn(d,l):l+"{"+Wn(d,l[1]=="k"?"":r)+"}":typeof d=="object"?s+=Wn(d,r?r.replace(/([^,])+/g,f=>l.replace(/([^,]*:\S+\([^)]*\))|([^,])+/g,h=>/&/.test(h)?h.replace(/&/g,f):f?f+" "+h:h)):l):d!=null&&(l=/^--/.test(l)?l:l.replace(/[A-Z]/g,"-$&").toLowerCase(),u+=Wn.p?Wn.p(l,d):l+":"+d+";")}return i+(r&&u?r+"{"+u+"}":u)+s},hn={},u1=t=>{if(typeof t=="object"){let r="";for(let i in t)r+=i+u1(t[i]);return r}return t},jS=(t,r,i,s,u)=>{let l=u1(t),d=hn[l]||(hn[l]=(h=>{let m=0,g=11;for(;m<h.length;)g=101*g+h.charCodeAt(m++)>>>0;return"go"+g})(l));if(!hn[d]){let h=l!==t?t:(m=>{let g,v,x=[{}];for(;g=PS.exec(m.replace(RS,""));)g[4]?x.shift():g[3]?(v=g[3].replace(T0," ").trim(),x.unshift(x[0][v]=x[0][v]||{})):x[0][g[1]]=g[2].replace(T0," ").trim();return x[0]})(t);hn[d]=Wn(u?{["@keyframes "+d]:h}:h,i?"":"."+d)}let f=i&&hn.g?hn.g:null;return i&&(hn.g=hn[d]),((h,m,g,v)=>{v?m.data=m.data.replace(v,h):m.data.indexOf(h)===-1&&(m.data=g?h+m.data:m.data+h)})(hn[d],r,s,f),d},bS=(t,r,i)=>t.reduce((s,u,l)=>{let d=r[l];if(d&&d.call){let f=d(i),h=f&&f.props&&f.props.className||/^go/.test(f)&&f;d=h?"."+h:f&&typeof f=="object"?f.props?"":Wn(f,""):f===!1?"":f}return s+u+(d??"")},"");function Ka(t){let r=this||{},i=t.call?t(r.p):t;return jS(i.unshift?i.raw?bS(i,[].slice.call(arguments,1),r.p):i.reduce((s,u)=>Object.assign(s,u&&u.call?u(r.p):u),{}):i,TS(r.target),r.g,r.o,r.k)}let l1,Gc,Xc;Ka.bind({g:1});let xn=Ka.bind({k:1});function MS(t,r,i,s){Wn.p=r,l1=t,Gc=i,Xc=s}function Qn(t,r){let i=this||{};return function(){let s=arguments;function u(l,d){let f=Object.assign({},l),h=f.className||u.className;i.p=Object.assign({theme:Gc&&Gc()},f),i.o=/ *go\d+/.test(h),f.className=Ka.apply(i,s)+(h?" "+h:"");let m=t;return t[0]&&(m=f.as||t,delete f.as),Xc&&m[0]&&Xc(f),l1(m,f)}return u}}var LS=t=>typeof t=="function",Ra=(t,r)=>LS(t)?t(r):t,IS=(()=>{let t=0;return()=>(++t).toString()})(),c1=(()=>{let t;return()=>{if(t===void 0&&typeof window<"u"){let r=matchMedia("(prefers-reduced-motion: reduce)");t=!r||r.matches}return t}})(),VS=20,d1=(t,r)=>{switch(r.type){case 0:return{...t,toasts:[r.toast,...t.toasts].slice(0,VS)};case 1:return{...t,toasts:t.toasts.map(l=>l.id===r.toast.id?{...l,...r.toast}:l)};case 2:let{toast:i}=r;return d1(t,{type:t.toasts.find(l=>l.id===i.id)?1:0,toast:i});case 3:let{toastId:s}=r;return{...t,toasts:t.toasts.map(l=>l.id===s||s===void 0?{...l,dismissed:!0,visible:!1}:l)};case 4:return r.toastId===void 0?{...t,toasts:[]}:{...t,toasts:t.toasts.filter(l=>l.id!==r.toastId)};case 5:return{...t,pausedAt:r.time};case 6:let u=r.time-(t.pausedAt||0);return{...t,pausedAt:void 0,toasts:t.toasts.map(l=>({...l,pauseDuration:l.pauseDuration+u}))}}},wa=[],yr={toasts:[],pausedAt:void 0},Cr=t=>{yr=d1(yr,t),wa.forEach(r=>{r(yr)})},_S={blank:4e3,error:4e3,success:2e3,loading:1/0,custom:4e3},NS=(t={})=>{let[r,i]=C.useState(yr),s=C.useRef(yr);C.useEffect(()=>(s.current!==yr&&i(yr),wa.push(i),()=>{let l=wa.indexOf(i);l>-1&&wa.splice(l,1)}),[]);let u=r.toasts.map(l=>{var d,f,h;return{...t,...t[l.type],...l,removeDelay:l.removeDelay||((d=t[l.type])==null?void 0:d.removeDelay)||(t==null?void 0:t.removeDelay),duration:l.duration||((f=t[l.type])==null?void 0:f.duration)||(t==null?void 0:t.duration)||_S[l.type],style:{...t.style,...(h=t[l.type])==null?void 0:h.style,...l.style}}});return{...r,toasts:u}},$S=(t,r="blank",i)=>({createdAt:Date.now(),visible:!0,dismissed:!1,type:r,ariaProps:{role:"status","aria-live":"polite"},message:t,pauseDuration:0,...i,id:(i==null?void 0:i.id)||IS()}),$o=t=>(r,i)=>{let s=$S(r,t,i);return Cr({type:2,toast:s}),s.id},ze=(t,r)=>$o("blank")(t,r);ze.error=$o("error");ze.success=$o("success");ze.loading=$o("loading");ze.custom=$o("custom");ze.dismiss=t=>{Cr({type:3,toastId:t})};ze.remove=t=>Cr({type:4,toastId:t});ze.promise=(t,r,i)=>{let s=ze.loading(r.loading,{...i,...i==null?void 0:i.loading});return typeof t=="function"&&(t=t()),t.then(u=>{let l=r.success?Ra(r.success,u):void 0;return l?ze.success(l,{id:s,...i,...i==null?void 0:i.success}):ze.dismiss(s),u}).catch(u=>{let l=r.error?Ra(r.error,u):void 0;l?ze.error(l,{id:s,...i,...i==null?void 0:i.error}):ze.dismiss(s)}),t};var zS=(t,r)=>{Cr({type:1,toast:{id:t,height:r}})},OS=()=>{Cr({type:5,time:Date.now()})},Eo=new Map,US=1e3,WS=(t,r=US)=>{if(Eo.has(t))return;let i=setTimeout(()=>{Eo.delete(t),Cr({type:4,toastId:t})},r);Eo.set(t,i)},HS=t=>{let{toasts:r,pausedAt:i}=NS(t);C.useEffect(()=>{if(i)return;let l=Date.now(),d=r.map(f=>{if(f.duration===1/0)return;let h=(f.duration||0)+f.pauseDuration-(l-f.createdAt);if(h<0){f.visible&&ze.dismiss(f.id);return}return setTimeout(()=>ze.dismiss(f.id),h)});return()=>{d.forEach(f=>f&&clearTimeout(f))}},[r,i]);let s=C.useCallback(()=>{i&&Cr({type:6,time:Date.now()})},[i]),u=C.useCallback((l,d)=>{let{reverseOrder:f=!1,gutter:h=8,defaultPosition:m}=d||{},g=r.filter(E=>(E.position||m)===(l.position||m)&&E.height),v=g.findIndex(E=>E.id===l.id),x=g.filter((E,S)=>S<v&&E.visible).length;return g.filter(E=>E.visible).slice(...f?[x+1]:[0,x]).reduce((E,S)=>E+(S.height||0)+h,0)},[r]);return C.useEffect(()=>{r.forEach(l=>{if(l.dismissed)WS(l.id,l.removeDelay);else{let d=Eo.get(l.id);d&&(clearTimeout(d),Eo.delete(l.id))}})},[r]),{toasts:r,handlers:{updateHeight:zS,startPause:OS,endPause:s,calculateOffset:u}}},KS=xn`
+`,k2=()=>{const[t,r]=C.useState(null),i=[{question:"筋斗云支持哪些语言？",answer:"筋斗云支持超过40个国家和地区的语言，覆盖全球主要语种，让你随时随地都能畅通无阻地进行交流。"},{question:"天外之音功能是什么？",answer:"天外之音是一个创新的语言学习功能，通过盲盒模式随机匹配外语伙伴，让你在趣味聊天中自然提升语言能力。"},{question:"文字润色功能如何使用？",answer:"就像有一位专业的语文老师，筋斗云能智能分析你的文字，提供更优雅、更地道的表达建议，适用于作文、报告等场景。"},{question:"外星人语音交流是什么？",answer:"这是一个趣味性的语音功能，可以为你的语音添加有趣的外星人音效，让语言学习和交流变得更加有趣。"}],s=d=>{r(t===d?null:d)},u={hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.1}}},l={hidden:{opacity:0,x:-30},visible:{opacity:1,x:0,transition:{duration:.5}}};return w.jsx(E2,{children:w.jsxs(C2,{as:X.div,variants:u,initial:"hidden",whileInView:"visible",viewport:{once:!0,margin:"-100px"},children:[w.jsx(F2,{variants:l,children:"常见问题"}),i.map((d,f)=>w.jsxs(S2,{variants:l,children:[w.jsxs(D2,{onClick:()=>s(f),whileTap:{scale:.98},children:[d.question,w.jsx(X.span,{animate:{rotate:t===f?180:0},transition:{duration:.3},children:"▼"})]}),w.jsx(Oa,{children:t===f&&w.jsx(A2,{initial:{height:0,opacity:0},animate:{height:"auto",opacity:1},exit:{height:0,opacity:0},transition:{duration:.3},children:w.jsx("p",{children:d.answer})})})]},f))]})})};let B2={data:""},T2=t=>typeof window=="object"?((t?t.querySelector("#_goober"):window._goober)||Object.assign((t||document.head).appendChild(document.createElement("style")),{innerHTML:" ",id:"_goober"})).firstChild:t||B2,P2=/(?:([\u0080-\uFFFF\w-%@]+) *:? *([^{;]+?);|([^;}{]*?) *{)|(}\s*)/g,R2=/\/\*[^]*?\*\/|  +/g,T0=/\n+/g,Wn=(t,r)=>{let i="",s="",u="";for(let l in t){let d=t[l];l[0]=="@"?l[1]=="i"?i=l+" "+d+";":s+=l[1]=="f"?Wn(d,l):l+"{"+Wn(d,l[1]=="k"?"":r)+"}":typeof d=="object"?s+=Wn(d,r?r.replace(/([^,])+/g,f=>l.replace(/([^,]*:\S+\([^)]*\))|([^,])+/g,h=>/&/.test(h)?h.replace(/&/g,f):f?f+" "+h:h)):l):d!=null&&(l=/^--/.test(l)?l:l.replace(/[A-Z]/g,"-$&").toLowerCase(),u+=Wn.p?Wn.p(l,d):l+":"+d+";")}return i+(r&&u?r+"{"+u+"}":u)+s},hn={},u1=t=>{if(typeof t=="object"){let r="";for(let i in t)r+=i+u1(t[i]);return r}return t},j2=(t,r,i,s,u)=>{let l=u1(t),d=hn[l]||(hn[l]=(h=>{let m=0,g=11;for(;m<h.length;)g=101*g+h.charCodeAt(m++)>>>0;return"go"+g})(l));if(!hn[d]){let h=l!==t?t:(m=>{let g,v,x=[{}];for(;g=P2.exec(m.replace(R2,""));)g[4]?x.shift():g[3]?(v=g[3].replace(T0," ").trim(),x.unshift(x[0][v]=x[0][v]||{})):x[0][g[1]]=g[2].replace(T0," ").trim();return x[0]})(t);hn[d]=Wn(u?{["@keyframes "+d]:h}:h,i?"":"."+d)}let f=i&&hn.g?hn.g:null;return i&&(hn.g=hn[d]),((h,m,g,v)=>{v?m.data=m.data.replace(v,h):m.data.indexOf(h)===-1&&(m.data=g?h+m.data:m.data+h)})(hn[d],r,s,f),d},b2=(t,r,i)=>t.reduce((s,u,l)=>{let d=r[l];if(d&&d.call){let f=d(i),h=f&&f.props&&f.props.className||/^go/.test(f)&&f;d=h?"."+h:f&&typeof f=="object"?f.props?"":Wn(f,""):f===!1?"":f}return s+u+(d??"")},"");function Ka(t){let r=this||{},i=t.call?t(r.p):t;return j2(i.unshift?i.raw?b2(i,[].slice.call(arguments,1),r.p):i.reduce((s,u)=>Object.assign(s,u&&u.call?u(r.p):u),{}):i,T2(r.target),r.g,r.o,r.k)}let l1,Gc,Xc;Ka.bind({g:1});let xn=Ka.bind({k:1});function M2(t,r,i,s){Wn.p=r,l1=t,Gc=i,Xc=s}function Qn(t,r){let i=this||{};return function(){let s=arguments;function u(l,d){let f=Object.assign({},l),h=f.className||u.className;i.p=Object.assign({theme:Gc&&Gc()},f),i.o=/ *go\d+/.test(h),f.className=Ka.apply(i,s)+(h?" "+h:"");let m=t;return t[0]&&(m=f.as||t,delete f.as),Xc&&m[0]&&Xc(f),l1(m,f)}return u}}var L2=t=>typeof t=="function",Ra=(t,r)=>L2(t)?t(r):t,I2=(()=>{let t=0;return()=>(++t).toString()})(),c1=(()=>{let t;return()=>{if(t===void 0&&typeof window<"u"){let r=matchMedia("(prefers-reduced-motion: reduce)");t=!r||r.matches}return t}})(),V2=20,d1=(t,r)=>{switch(r.type){case 0:return{...t,toasts:[r.toast,...t.toasts].slice(0,V2)};case 1:return{...t,toasts:t.toasts.map(l=>l.id===r.toast.id?{...l,...r.toast}:l)};case 2:let{toast:i}=r;return d1(t,{type:t.toasts.find(l=>l.id===i.id)?1:0,toast:i});case 3:let{toastId:s}=r;return{...t,toasts:t.toasts.map(l=>l.id===s||s===void 0?{...l,dismissed:!0,visible:!1}:l)};case 4:return r.toastId===void 0?{...t,toasts:[]}:{...t,toasts:t.toasts.filter(l=>l.id!==r.toastId)};case 5:return{...t,pausedAt:r.time};case 6:let u=r.time-(t.pausedAt||0);return{...t,pausedAt:void 0,toasts:t.toasts.map(l=>({...l,pauseDuration:l.pauseDuration+u}))}}},wa=[],yr={toasts:[],pausedAt:void 0},Cr=t=>{yr=d1(yr,t),wa.forEach(r=>{r(yr)})},_2={blank:4e3,error:4e3,success:2e3,loading:1/0,custom:4e3},N2=(t={})=>{let[r,i]=C.useState(yr),s=C.useRef(yr);C.useEffect(()=>(s.current!==yr&&i(yr),wa.push(i),()=>{let l=wa.indexOf(i);l>-1&&wa.splice(l,1)}),[]);let u=r.toasts.map(l=>{var d,f,h;return{...t,...t[l.type],...l,removeDelay:l.removeDelay||((d=t[l.type])==null?void 0:d.removeDelay)||(t==null?void 0:t.removeDelay),duration:l.duration||((f=t[l.type])==null?void 0:f.duration)||(t==null?void 0:t.duration)||_2[l.type],style:{...t.style,...(h=t[l.type])==null?void 0:h.style,...l.style}}});return{...r,toasts:u}},$2=(t,r="blank",i)=>({createdAt:Date.now(),visible:!0,dismissed:!1,type:r,ariaProps:{role:"status","aria-live":"polite"},message:t,pauseDuration:0,...i,id:(i==null?void 0:i.id)||I2()}),$o=t=>(r,i)=>{let s=$2(r,t,i);return Cr({type:2,toast:s}),s.id},ze=(t,r)=>$o("blank")(t,r);ze.error=$o("error");ze.success=$o("success");ze.loading=$o("loading");ze.custom=$o("custom");ze.dismiss=t=>{Cr({type:3,toastId:t})};ze.remove=t=>Cr({type:4,toastId:t});ze.promise=(t,r,i)=>{let s=ze.loading(r.loading,{...i,...i==null?void 0:i.loading});return typeof t=="function"&&(t=t()),t.then(u=>{let l=r.success?Ra(r.success,u):void 0;return l?ze.success(l,{id:s,...i,...i==null?void 0:i.success}):ze.dismiss(s),u}).catch(u=>{let l=r.error?Ra(r.error,u):void 0;l?ze.error(l,{id:s,...i,...i==null?void 0:i.error}):ze.dismiss(s)}),t};var z2=(t,r)=>{Cr({type:1,toast:{id:t,height:r}})},O2=()=>{Cr({type:5,time:Date.now()})},Eo=new Map,U2=1e3,W2=(t,r=U2)=>{if(Eo.has(t))return;let i=setTimeout(()=>{Eo.delete(t),Cr({type:4,toastId:t})},r);Eo.set(t,i)},H2=t=>{let{toasts:r,pausedAt:i}=N2(t);C.useEffect(()=>{if(i)return;let l=Date.now(),d=r.map(f=>{if(f.duration===1/0)return;let h=(f.duration||0)+f.pauseDuration-(l-f.createdAt);if(h<0){f.visible&&ze.dismiss(f.id);return}return setTimeout(()=>ze.dismiss(f.id),h)});return()=>{d.forEach(f=>f&&clearTimeout(f))}},[r,i]);let s=C.useCallback(()=>{i&&Cr({type:6,time:Date.now()})},[i]),u=C.useCallback((l,d)=>{let{reverseOrder:f=!1,gutter:h=8,defaultPosition:m}=d||{},g=r.filter(E=>(E.position||m)===(l.position||m)&&E.height),v=g.findIndex(E=>E.id===l.id),x=g.filter((E,S)=>S<v&&E.visible).length;return g.filter(E=>E.visible).slice(...f?[x+1]:[0,x]).reduce((E,S)=>E+(S.height||0)+h,0)},[r]);return C.useEffect(()=>{r.forEach(l=>{if(l.dismissed)W2(l.id,l.removeDelay);else{let d=Eo.get(l.id);d&&(clearTimeout(d),Eo.delete(l.id))}})},[r]),{toasts:r,handlers:{updateHeight:z2,startPause:O2,endPause:s,calculateOffset:u}}},K2=xn`
 from {
   transform: scale(0) rotate(45deg);
 	opacity: 0;
@@ -693,7 +693,7 @@ from {
 to {
  transform: scale(1) rotate(45deg);
   opacity: 1;
-}`,YS=xn`
+}`,Y2=xn`
 from {
   transform: scale(0);
   opacity: 0;
@@ -701,7 +701,7 @@ from {
 to {
   transform: scale(1);
   opacity: 1;
-}`,GS=xn`
+}`,G2=xn`
 from {
   transform: scale(0) rotate(90deg);
 	opacity: 0;
@@ -709,7 +709,7 @@ from {
 to {
   transform: scale(1) rotate(90deg);
 	opacity: 1;
-}`,XS=Qn("div")`
+}`,X2=Qn("div")`
   width: 20px;
   opacity: 0;
   height: 20px;
@@ -718,14 +718,14 @@ to {
   position: relative;
   transform: rotate(45deg);
 
-  animation: ${KS} 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  animation: ${K2} 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     forwards;
   animation-delay: 100ms;
 
   &:after,
   &:before {
     content: '';
-    animation: ${YS} 0.15s ease-out forwards;
+    animation: ${Y2} 0.15s ease-out forwards;
     animation-delay: 150ms;
     position: absolute;
     border-radius: 3px;
@@ -738,18 +738,18 @@ to {
   }
 
   &:before {
-    animation: ${GS} 0.15s ease-out forwards;
+    animation: ${G2} 0.15s ease-out forwards;
     animation-delay: 180ms;
     transform: rotate(90deg);
   }
-`,QS=xn`
+`,Q2=xn`
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-`,qS=Qn("div")`
+`,q2=Qn("div")`
   width: 12px;
   height: 12px;
   box-sizing: border-box;
@@ -757,8 +757,8 @@ to {
   border-radius: 100%;
   border-color: ${t=>t.secondary||"#e0e0e0"};
   border-right-color: ${t=>t.primary||"#616161"};
-  animation: ${QS} 1s linear infinite;
-`,ZS=xn`
+  animation: ${Q2} 1s linear infinite;
+`,Z2=xn`
 from {
   transform: scale(0) rotate(45deg);
 	opacity: 0;
@@ -766,7 +766,7 @@ from {
 to {
   transform: scale(1) rotate(45deg);
 	opacity: 1;
-}`,JS=xn`
+}`,J2=xn`
 0% {
 	height: 0;
 	width: 0;
@@ -780,7 +780,7 @@ to {
 100% {
   opacity: 1;
   height: 10px;
-}`,e2=Qn("div")`
+}`,eS=Qn("div")`
   width: 20px;
   opacity: 0;
   height: 20px;
@@ -789,13 +789,13 @@ to {
   position: relative;
   transform: rotate(45deg);
 
-  animation: ${ZS} 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  animation: ${Z2} 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     forwards;
   animation-delay: 100ms;
   &:after {
     content: '';
     box-sizing: border-box;
-    animation: ${JS} 0.2s ease-out forwards;
+    animation: ${J2} 0.2s ease-out forwards;
     opacity: 0;
     animation-delay: 200ms;
     position: absolute;
@@ -807,16 +807,16 @@ to {
     height: 10px;
     width: 6px;
   }
-`,t2=Qn("div")`
+`,tS=Qn("div")`
   position: absolute;
-`,n2=Qn("div")`
+`,nS=Qn("div")`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 20px;
   min-height: 20px;
-`,r2=xn`
+`,rS=xn`
 from {
   transform: scale(0.6);
   opacity: 0.4;
@@ -824,20 +824,20 @@ from {
 to {
   transform: scale(1);
   opacity: 1;
-}`,i2=Qn("div")`
+}`,iS=Qn("div")`
   position: relative;
   transform: scale(0.6);
   opacity: 0.4;
   min-width: 20px;
-  animation: ${r2} 0.3s 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  animation: ${rS} 0.3s 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     forwards;
-`,o2=({toast:t})=>{let{icon:r,type:i,iconTheme:s}=t;return r!==void 0?typeof r=="string"?C.createElement(i2,null,r):r:i==="blank"?null:C.createElement(n2,null,C.createElement(qS,{...s}),i!=="loading"&&C.createElement(t2,null,i==="error"?C.createElement(XS,{...s}):C.createElement(e2,{...s})))},s2=t=>`
+`,oS=({toast:t})=>{let{icon:r,type:i,iconTheme:s}=t;return r!==void 0?typeof r=="string"?C.createElement(iS,null,r):r:i==="blank"?null:C.createElement(nS,null,C.createElement(q2,{...s}),i!=="loading"&&C.createElement(tS,null,i==="error"?C.createElement(X2,{...s}):C.createElement(eS,{...s})))},sS=t=>`
 0% {transform: translate3d(0,${t*-200}%,0) scale(.6); opacity:.5;}
 100% {transform: translate3d(0,0,0) scale(1); opacity:1;}
-`,a2=t=>`
+`,aS=t=>`
 0% {transform: translate3d(0,0,-1px) scale(1); opacity:1;}
 100% {transform: translate3d(0,${t*-150}%,-1px) scale(.6); opacity:0;}
-`,u2="0%{opacity:0;} 100%{opacity:1;}",l2="0%{opacity:1;} 100%{opacity:0;}",c2=Qn("div")`
+`,uS="0%{opacity:0;} 100%{opacity:1;}",lS="0%{opacity:1;} 100%{opacity:0;}",cS=Qn("div")`
   display: flex;
   align-items: center;
   background: #fff;
@@ -849,30 +849,30 @@ to {
   pointer-events: auto;
   padding: 8px 10px;
   border-radius: 8px;
-`,d2=Qn("div")`
+`,dS=Qn("div")`
   display: flex;
   justify-content: center;
   margin: 4px 10px;
   color: inherit;
   flex: 1 1 auto;
   white-space: pre-line;
-`,f2=(t,r)=>{let i=t.includes("top")?1:-1,[s,u]=c1()?[u2,l2]:[s2(i),a2(i)];return{animation:r?`${xn(s)} 0.35s cubic-bezier(.21,1.02,.73,1) forwards`:`${xn(u)} 0.4s forwards cubic-bezier(.06,.71,.55,1)`}},p2=C.memo(({toast:t,position:r,style:i,children:s})=>{let u=t.height?f2(t.position||r||"top-center",t.visible):{opacity:0},l=C.createElement(o2,{toast:t}),d=C.createElement(d2,{...t.ariaProps},Ra(t.message,t));return C.createElement(c2,{className:t.className,style:{...u,...i,...t.style}},typeof s=="function"?s({icon:l,message:d}):C.createElement(C.Fragment,null,l,d))});MS(C.createElement);var h2=({id:t,className:r,style:i,onHeightUpdate:s,children:u})=>{let l=C.useCallback(d=>{if(d){let f=()=>{let h=d.getBoundingClientRect().height;s(t,h)};f(),new MutationObserver(f).observe(d,{subtree:!0,childList:!0,characterData:!0})}},[t,s]);return C.createElement("div",{ref:l,className:r,style:i},u)},m2=(t,r)=>{let i=t.includes("top"),s=i?{top:0}:{bottom:0},u=t.includes("center")?{justifyContent:"center"}:t.includes("right")?{justifyContent:"flex-end"}:{};return{left:0,right:0,display:"flex",position:"absolute",transition:c1()?void 0:"all 230ms cubic-bezier(.21,1.02,.73,1)",transform:`translateY(${r*(i?1:-1)}px)`,...s,...u}},g2=Ka`
+`,fS=(t,r)=>{let i=t.includes("top")?1:-1,[s,u]=c1()?[uS,lS]:[sS(i),aS(i)];return{animation:r?`${xn(s)} 0.35s cubic-bezier(.21,1.02,.73,1) forwards`:`${xn(u)} 0.4s forwards cubic-bezier(.06,.71,.55,1)`}},pS=C.memo(({toast:t,position:r,style:i,children:s})=>{let u=t.height?fS(t.position||r||"top-center",t.visible):{opacity:0},l=C.createElement(oS,{toast:t}),d=C.createElement(dS,{...t.ariaProps},Ra(t.message,t));return C.createElement(cS,{className:t.className,style:{...u,...i,...t.style}},typeof s=="function"?s({icon:l,message:d}):C.createElement(C.Fragment,null,l,d))});M2(C.createElement);var hS=({id:t,className:r,style:i,onHeightUpdate:s,children:u})=>{let l=C.useCallback(d=>{if(d){let f=()=>{let h=d.getBoundingClientRect().height;s(t,h)};f(),new MutationObserver(f).observe(d,{subtree:!0,childList:!0,characterData:!0})}},[t,s]);return C.createElement("div",{ref:l,className:r,style:i},u)},mS=(t,r)=>{let i=t.includes("top"),s=i?{top:0}:{bottom:0},u=t.includes("center")?{justifyContent:"center"}:t.includes("right")?{justifyContent:"flex-end"}:{};return{left:0,right:0,display:"flex",position:"absolute",transition:c1()?void 0:"all 230ms cubic-bezier(.21,1.02,.73,1)",transform:`translateY(${r*(i?1:-1)}px)`,...s,...u}},gS=Ka`
   z-index: 9999;
   > * {
     pointer-events: auto;
   }
-`,sa=16,y2=({reverseOrder:t,position:r="top-center",toastOptions:i,gutter:s,children:u,containerStyle:l,containerClassName:d})=>{let{toasts:f,handlers:h}=HS(i);return C.createElement("div",{id:"_rht_toaster",style:{position:"fixed",zIndex:9999,top:sa,left:sa,right:sa,bottom:sa,pointerEvents:"none",...l},className:d,onMouseEnter:h.startPause,onMouseLeave:h.endPause},f.map(m=>{let g=m.position||r,v=h.calculateOffset(m,{reverseOrder:t,gutter:s,defaultPosition:r}),x=m2(g,v);return C.createElement(h2,{id:m.id,key:m.id,onHeightUpdate:h.updateHeight,className:m.visible?g2:"",style:x},m.type==="custom"?Ra(m.message,m):u?u(m):C.createElement(p2,{toast:m,position:g}))}))};const v2=I.section`
+`,sa=16,yS=({reverseOrder:t,position:r="top-center",toastOptions:i,gutter:s,children:u,containerStyle:l,containerClassName:d})=>{let{toasts:f,handlers:h}=H2(i);return C.createElement("div",{id:"_rht_toaster",style:{position:"fixed",zIndex:9999,top:sa,left:sa,right:sa,bottom:sa,pointerEvents:"none",...l},className:d,onMouseEnter:h.startPause,onMouseLeave:h.endPause},f.map(m=>{let g=m.position||r,v=h.calculateOffset(m,{reverseOrder:t,gutter:s,defaultPosition:r}),x=mS(g,v);return C.createElement(hS,{id:m.id,key:m.id,onHeightUpdate:h.updateHeight,className:m.visible?gS:"",style:x},m.type==="custom"?Ra(m.message,m):u?u(m):C.createElement(pS,{toast:m,position:g}))}))};const vS=I.section`
   padding: 80px 20px;
   background: ${({theme:t})=>t.colors.background};
   position: relative;
   overflow: hidden;
   min-height: 600px;
-`,x2=I.div`
+`,xS=I.div`
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-`,w2=I.div`
+`,wS=I.div`
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 4rem;
@@ -883,20 +883,20 @@ to {
     gap: 2rem;
     text-align: center;
   }
-`,E2=I.div`
+`,ES=I.div`
   padding-right: 2rem;
 
   @media (max-width: 768px) {
     padding-right: 0;
     order: 2;
   }
-`,C2=I.div`
+`,CS=I.div`
   position: relative;
   
   @media (max-width: 768px) {
     order: 1;
   }
-`,F2=I(X.div)`
+`,FS=I(X.div)`
   position: relative;
   perspective: 1000px;
   
@@ -921,7 +921,7 @@ to {
     );
     pointer-events: none;
   }
-`,S2=I.h3`
+`,SS=I.h3`
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -933,7 +933,7 @@ to {
   @media (max-width: 768px) {
     font-size: 2rem;
   }
-`,D2=I.p`
+`,DS=I.p`
   font-size: 1.2rem;
   color: ${({theme:t})=>t.colors.text};
   opacity: 0.8;
@@ -953,11 +953,11 @@ to {
   background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(37, 99, 235, 0.05));
   backdrop-filter: blur(4px);
   z-index: 0;
-`;const A2=()=>w.jsxs(v2,{children:[w.jsx(Ud,{}),w.jsx(x2,{children:w.jsxs(w2,{children:[w.jsxs(E2,{children:[w.jsx(S2,{children:"简约设计，优雅交互"}),w.jsx(D2,{children:"轻盈的双语输入按钮，如同两个灵动的肥皂泡，让语言切换变得轻松自如。 简约不简单的设计理念，带来流畅的操作体验。每一次交互都经过精心打磨， 让您的翻译之旅充满愉悦感。"})]}),w.jsx(C2,{children:w.jsx(F2,{initial:{opacity:0,scale:.8,rotateY:-20},whileInView:{opacity:1,scale:1,rotateY:0,transition:{type:"spring",duration:1.2,bounce:.4}},animate:{y:[0,-10,0],rotateY:[-5,5,-5]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},whileHover:{scale:1.05,rotateY:10,transition:{duration:.3}},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/appindex.png",alt:"筋斗云主界面"})})})]})})]}),k2=I.footer`
+`;const AS=()=>w.jsxs(vS,{children:[w.jsx(Ud,{}),w.jsx(xS,{children:w.jsxs(wS,{children:[w.jsxs(ES,{children:[w.jsx(SS,{children:"简约设计，优雅交互"}),w.jsx(DS,{children:"轻盈的双语输入按钮，如同两个灵动的肥皂泡，让语言切换变得轻松自如。 简约不简单的设计理念，带来流畅的操作体验。每一次交互都经过精心打磨， 让您的翻译之旅充满愉悦感。"})]}),w.jsx(CS,{children:w.jsx(FS,{initial:{opacity:0,scale:.8,rotateY:-20},whileInView:{opacity:1,scale:1,rotateY:0,transition:{type:"spring",duration:1.2,bounce:.4}},animate:{y:[0,-10,0],rotateY:[-5,5,-5]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},whileHover:{scale:1.05,rotateY:10,transition:{duration:.3}},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/appindex.png",alt:"筋斗云主界面"})})})]})})]}),kS=I.footer`
   padding: 20px;
   background: ${({theme:t})=>t.colors.background};
   border-top: 1px solid rgba(124, 58, 237, 0.1);
-`,B2=I.div`
+`,BS=I.div`
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -975,7 +975,7 @@ to {
   &:hover {
     opacity: 1;
   }
-`;const T2=I.a`
+`;const TS=I.a`
   color: ${({theme:t})=>t.colors.text};
   text-decoration: none;
   opacity: 0.8;
@@ -985,7 +985,7 @@ to {
   &:hover {
     opacity: 1;
   }
-`,lo=()=>w.jsx(k2,{children:w.jsx(B2,{children:w.jsx(T2,{href:"mailto:cming0185@gmail.com",children:"联系我们"})})}),P2=I.section`
+`,lo=()=>w.jsx(kS,{children:w.jsx(BS,{children:w.jsx(TS,{href:"mailto:cming0185@gmail.com",children:"联系我们"})})}),PS=I.section`
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -1011,7 +1011,7 @@ to {
     background: radial-gradient(circle at center, rgba(58, 124, 237, 0.1) 0%, rgba(5, 5, 5, 1) 70%);
     z-index: 0;
   }
-`,R2=I(X.div)`
+`,RS=I(X.div)`
   text-align: center;
   z-index: 1;
   max-width: 1000px;
@@ -1020,7 +1020,7 @@ to {
   @media (max-width: 768px) {
     padding-top: 2rem;
   }
-`,j2=I(X.h1)`
+`,jS=I(X.h1)`
   font-size: 4rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
@@ -1031,7 +1031,7 @@ to {
   @media (max-width: 768px) {
     font-size: 2.8rem;
   }
-`,b2=I(X.p)`
+`,bS=I(X.p)`
   font-size: 1.5rem;
   color: ${({theme:t})=>t.colors.text};
   max-width: 800px;
@@ -1068,7 +1068,7 @@ to {
   @media (max-width: 768px) {
     font-size: 2rem;
   }
-`,M2=I.div`
+`,MS=I.div`
   font-size: 1.2rem;
   line-height: 1.7;
   color: ${({theme:t})=>t.colors.text};
@@ -1081,7 +1081,7 @@ to {
   @media (max-width: 768px) {
     font-size: 1.1rem;
   }
-`,L2=I.div`
+`,LS=I.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2.5rem;
@@ -1116,7 +1116,7 @@ to {
   color: ${({theme:t})=>t.colors.text};
   opacity: 0.9;
   flex-grow: 1;
-`,I2=I.section`
+`,IS=I.section`
   padding: 80px 20px;
   background: ${({theme:t})=>t.colors.background};
   position: relative;
@@ -1179,7 +1179,7 @@ to {
     );
     pointer-events: none;
   }
-`,V2=()=>{const t={hidden:{y:20,opacity:0},visible:{y:0,opacity:1,transition:{type:"spring",stiffness:300,damping:20}}};return w.jsxs(w.Fragment,{children:[w.jsx(P2,{children:w.jsxs(R2,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.8},children:[w.jsx(j2,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.4},children:"泡泡平行宇宙"}),w.jsx(b2,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.6},children:"克隆您喜爱的音色，让AI用熟悉的声音与您聊天，打造专属于您的交流体验"})]})}),w.jsx(P0,{children:w.jsxs(cc,{children:[w.jsx(aa,{children:"平行宇宙是什么？"}),w.jsx(M2,{children:"泡泡平行宇宙是一款创新的AI音色克隆工具，它能够精准克隆指定的人声音色，并让AI使用该音色与您进行自然流畅的对话。 无论是模仿您喜爱的名人声音，还是复制家人朋友的音色，平行宇宙都能为您创造独特的交流体验。 通过先进的语音克隆技术，它能够捕捉音色的细微特点，让AI对话更加真实自然，仿佛与真人交流一般。"})]})}),w.jsx(I2,{children:w.jsxs(cc,{children:[w.jsxs(R0,{children:[w.jsxs(j0,{children:[w.jsx(aa,{style:{textAlign:"left"},children:"音色克隆"}),w.jsx(Nn,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"只需提供几分钟的语音样本，泡泡平行宇宙就能精确克隆出目标音色。 无论是低沉磁性的男声，还是清脆悦耳的女声，系统都能准确捕捉音色特点， 并应用到AI对话中，让交流更加生动有趣。"})]}),w.jsx(b0,{children:w.jsx(M0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[-1,1,-1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/pingxingyuzhou.png",alt:"平行宇宙音色克隆"})})})]}),w.jsxs(R0,{children:[w.jsx(b0,{children:w.jsx(M0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[1,-1,1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/appindex.png",alt:"平行宇宙应用界面"})})}),w.jsxs(j0,{children:[w.jsx(aa,{style:{textAlign:"left"},children:"智能聊天"}),w.jsx(Nn,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"泡泡平行宇宙不仅仅是音色克隆工具，更是强大的AI聊天助手。它能够理解复杂的对话， 跟随上下文，提供有趣而有见地的回应。无论是日常闲聊、情感支持，还是知识探讨， 都能用您喜爱的声音与您进行自然流畅的互动。"})]})]})]})}),w.jsx(P0,{children:w.jsxs(cc,{children:[w.jsx(aa,{children:"主要特点"}),w.jsxs(L2,{children:[w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"精准音色克隆"}),w.jsx(Nn,{children:"通过先进的深度学习算法，只需少量样本即可精确复制目标音色，包括音调、音色、语速和情感特点等细微特征。"})]}),w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"自然对话体验"}),w.jsx(Nn,{children:"结合强大的AI语言模型，提供流畅自然的对话交流，能够理解上下文，记忆对话历史，模拟真实人类交流。"})]}),w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"情感表达"}),w.jsx(Nn,{children:"AI能够在对话中表达各种情感，如欢乐、同情、惊讶等，通过语调和语速变化，让交流更加生动有感染力。"})]}),w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"多场景应用"}),w.jsx(Nn,{children:"适用于多种场景，包括虚拟伴侣、语音助手、有声读物朗读、角色扮演等，为用户创造独特的交互体验。"})]}),w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"音色管理"}),w.jsx(Nn,{children:"支持创建和管理多个音色模型，随时切换不同的声音，为不同场景和需求选择适合的音色。"})]}),w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"隐私保护"}),w.jsx(Nn,{children:"严格的隐私保护措施，确保用户提供的语音样本和对话内容安全保密，未经授权不会用于其他用途。"})]})]})]})})]})},_2=I.section`
+`,VS=()=>{const t={hidden:{y:20,opacity:0},visible:{y:0,opacity:1,transition:{type:"spring",stiffness:300,damping:20}}};return w.jsxs(w.Fragment,{children:[w.jsx(PS,{children:w.jsxs(RS,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.8},children:[w.jsx(jS,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.4},children:"泡泡平行宇宙"}),w.jsx(bS,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.6},children:"克隆您喜爱的音色，让AI用熟悉的声音与您聊天，打造专属于您的交流体验"})]})}),w.jsx(P0,{children:w.jsxs(cc,{children:[w.jsx(aa,{children:"平行宇宙是什么？"}),w.jsx(MS,{children:"泡泡平行宇宙是一款创新的AI音色克隆工具，它能够精准克隆指定的人声音色，并让AI使用该音色与您进行自然流畅的对话。 无论是模仿您喜爱的名人声音，还是复制家人朋友的音色，平行宇宙都能为您创造独特的交流体验。 通过先进的语音克隆技术，它能够捕捉音色的细微特点，让AI对话更加真实自然，仿佛与真人交流一般。"})]})}),w.jsx(IS,{children:w.jsxs(cc,{children:[w.jsxs(R0,{children:[w.jsxs(j0,{children:[w.jsx(aa,{style:{textAlign:"left"},children:"音色克隆"}),w.jsx(Nn,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"只需提供几分钟的语音样本，泡泡平行宇宙就能精确克隆出目标音色。 无论是低沉磁性的男声，还是清脆悦耳的女声，系统都能准确捕捉音色特点， 并应用到AI对话中，让交流更加生动有趣。"})]}),w.jsx(b0,{children:w.jsx(M0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[-1,1,-1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/pingxingyuzhou.png",alt:"平行宇宙音色克隆"})})})]}),w.jsxs(R0,{children:[w.jsx(b0,{children:w.jsx(M0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[1,-1,1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/appindex.png",alt:"平行宇宙应用界面"})})}),w.jsxs(j0,{children:[w.jsx(aa,{style:{textAlign:"left"},children:"智能聊天"}),w.jsx(Nn,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"泡泡平行宇宙不仅仅是音色克隆工具，更是强大的AI聊天助手。它能够理解复杂的对话， 跟随上下文，提供有趣而有见地的回应。无论是日常闲聊、情感支持，还是知识探讨， 都能用您喜爱的声音与您进行自然流畅的互动。"})]})]})]})}),w.jsx(P0,{children:w.jsxs(cc,{children:[w.jsx(aa,{children:"主要特点"}),w.jsxs(LS,{children:[w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"精准音色克隆"}),w.jsx(Nn,{children:"通过先进的深度学习算法，只需少量样本即可精确复制目标音色，包括音调、音色、语速和情感特点等细微特征。"})]}),w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"自然对话体验"}),w.jsx(Nn,{children:"结合强大的AI语言模型，提供流畅自然的对话交流，能够理解上下文，记忆对话历史，模拟真实人类交流。"})]}),w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"情感表达"}),w.jsx(Nn,{children:"AI能够在对话中表达各种情感，如欢乐、同情、惊讶等，通过语调和语速变化，让交流更加生动有感染力。"})]}),w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"多场景应用"}),w.jsx(Nn,{children:"适用于多种场景，包括虚拟伴侣、语音助手、有声读物朗读、角色扮演等，为用户创造独特的交互体验。"})]}),w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"音色管理"}),w.jsx(Nn,{children:"支持创建和管理多个音色模型，随时切换不同的声音，为不同场景和需求选择适合的音色。"})]}),w.jsxs(Xr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Qr,{children:"隐私保护"}),w.jsx(Nn,{children:"严格的隐私保护措施，确保用户提供的语音样本和对话内容安全保密，未经授权不会用于其他用途。"})]})]})]})})]})},_S=I.section`
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -1205,7 +1205,7 @@ to {
     background: radial-gradient(circle at center, rgba(236, 72, 153, 0.1) 0%, rgba(5, 5, 5, 1) 70%);
     z-index: 0;
   }
-`,N2=I(X.div)`
+`,NS=I(X.div)`
   text-align: center;
   z-index: 1;
   max-width: 1000px;
@@ -1214,7 +1214,7 @@ to {
   @media (max-width: 768px) {
     padding-top: 2rem;
   }
-`,$2=I(X.h1)`
+`,$S=I(X.h1)`
   font-size: 4rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
@@ -1225,7 +1225,7 @@ to {
   @media (max-width: 768px) {
     font-size: 2.8rem;
   }
-`,z2=I(X.p)`
+`,zS=I(X.p)`
   font-size: 1.5rem;
   color: ${({theme:t})=>t.colors.text};
   max-width: 800px;
@@ -1262,7 +1262,7 @@ to {
   @media (max-width: 768px) {
     font-size: 2rem;
   }
-`,O2=I.div`
+`,OS=I.div`
   font-size: 1.2rem;
   line-height: 1.7;
   color: ${({theme:t})=>t.colors.text};
@@ -1275,7 +1275,7 @@ to {
   @media (max-width: 768px) {
     font-size: 1.1rem;
   }
-`,U2=I.div`
+`,US=I.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2.5rem;
@@ -1310,7 +1310,7 @@ to {
   color: ${({theme:t})=>t.colors.text};
   opacity: 0.9;
   flex-grow: 1;
-`,W2=I.section`
+`,WS=I.section`
   padding: 80px 20px;
   background: ${({theme:t})=>t.colors.background};
   position: relative;
@@ -1373,7 +1373,7 @@ to {
     );
     pointer-events: none;
   }
-`,H2=()=>{const t={hidden:{y:20,opacity:0},visible:{y:0,opacity:1,transition:{type:"spring",stiffness:300,damping:20}}};return w.jsxs(w.Fragment,{children:[w.jsx(_2,{children:w.jsxs(N2,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.8},children:[w.jsx($2,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.4},children:"泡泡同传译梦"}),w.jsx(z2,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.6},children:"实时翻译，支持40国语言，让沟通无国界，让跨语言交流如同母语般自然流畅"})]})}),w.jsx(L0,{children:w.jsxs(dc,{children:[w.jsx(ua,{children:"同传译梦是什么？"}),w.jsx(O2,{children:"泡泡同传译梦是一款专注于实时同声传译的应用，支持40个国家的语言，能够在各种场景下提供即时翻译服务。 它特别适合会议同传、实时对话、演讲翻译等需要即时性的场合，让不同语言背景的人们能够无障碍地交流， 就像使用同一种语言一样自然流畅，彻底消除语言壁垒。"})]})}),w.jsx(W2,{children:w.jsxs(dc,{children:[w.jsxs(I0,{children:[w.jsxs(V0,{children:[w.jsx(ua,{style:{textAlign:"left"},children:"实时翻译"}),w.jsx($n,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"同传译梦最大的特点是实时性，能够在您说话的同时进行翻译，延迟几乎可以忽略不计。 这使它成为国际会议、商务谈判、学术交流等场合的理想工具，让演讲者的话语几乎同步地 传递给使用不同语言的听众，保持交流的连贯性和流畅度。"})]}),w.jsx(_0,{children:w.jsx(N0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[-1,1,-1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/tongchuanyimeng.png",alt:"同传译梦实时翻译"})})})]}),w.jsxs(I0,{children:[w.jsx(_0,{children:w.jsx(N0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[1,-1,1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/appindex.png",alt:"同传译梦多语种支持"})})}),w.jsxs(V0,{children:[w.jsx(ua,{style:{textAlign:"left"},children:"多语种支持"}),w.jsx($n,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"同传译梦支持40个国家的语言，覆盖全球主要语言和地区性语言。 无论是英语、法语、德语、西班牙语、中文、日语、韩语，还是阿拉伯语、俄语等， 同传译梦都能提供准确流畅的翻译，让全球沟通变得轻松自如。"})]})]})]})}),w.jsx(L0,{children:w.jsxs(dc,{children:[w.jsx(ua,{children:"主要功能"}),w.jsxs(U2,{children:[w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"会议同传"}),w.jsx($n,{children:"为多语言会议提供实时翻译服务，支持多人同时参与，每个参与者都能听到自己语言的翻译内容，让国际会议沟通无障碍。"})]}),w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"语音翻译"}),w.jsx($n,{children:"实时捕捉语音内容并转换为目标语言，保留原始语调和情感特征，使交流更加自然流畅，适用于面对面交谈和远程通话。"})]}),w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"演讲翻译"}),w.jsx($n,{children:"为演讲、讲座、培训等场合提供实时字幕和语音翻译，帮助听众即时理解内容，提升国际活动的参与体验。"})]}),w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"旅行助手"}),w.jsx($n,{children:"支持离线模式，无需网络也能在国外旅行时进行基本沟通。内置常用旅行短语和场景对话，帮助快速应对各种旅行情况。"})]}),w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"多端同步"}),w.jsx($n,{children:"支持在手机、平板、电脑等多种设备上同步使用，随时随地满足翻译需求，适应不同场景下的使用习惯。"})]}),w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"专业术语"}),w.jsx($n,{children:"内置医疗、法律、技术、金融等多个专业领域的术语库，确保在专业场合下翻译的准确性和专业性，满足不同行业的需求。"})]})]})]})})]})},K2=I.section`
+`,HS=()=>{const t={hidden:{y:20,opacity:0},visible:{y:0,opacity:1,transition:{type:"spring",stiffness:300,damping:20}}};return w.jsxs(w.Fragment,{children:[w.jsx(_S,{children:w.jsxs(NS,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.8},children:[w.jsx($S,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.4},children:"泡泡同传译梦"}),w.jsx(zS,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.6},children:"实时翻译，支持40国语言，让沟通无国界，让跨语言交流如同母语般自然流畅"})]})}),w.jsx(L0,{children:w.jsxs(dc,{children:[w.jsx(ua,{children:"同传译梦是什么？"}),w.jsx(OS,{children:"泡泡同传译梦是一款专注于实时同声传译的应用，支持40个国家的语言，能够在各种场景下提供即时翻译服务。 它特别适合会议同传、实时对话、演讲翻译等需要即时性的场合，让不同语言背景的人们能够无障碍地交流， 就像使用同一种语言一样自然流畅，彻底消除语言壁垒。"})]})}),w.jsx(WS,{children:w.jsxs(dc,{children:[w.jsxs(I0,{children:[w.jsxs(V0,{children:[w.jsx(ua,{style:{textAlign:"left"},children:"实时翻译"}),w.jsx($n,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"同传译梦最大的特点是实时性，能够在您说话的同时进行翻译，延迟几乎可以忽略不计。 这使它成为国际会议、商务谈判、学术交流等场合的理想工具，让演讲者的话语几乎同步地 传递给使用不同语言的听众，保持交流的连贯性和流畅度。"})]}),w.jsx(_0,{children:w.jsx(N0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[-1,1,-1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/tongchuanyimeng.png",alt:"同传译梦实时翻译"})})})]}),w.jsxs(I0,{children:[w.jsx(_0,{children:w.jsx(N0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[1,-1,1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/appindex.png",alt:"同传译梦多语种支持"})})}),w.jsxs(V0,{children:[w.jsx(ua,{style:{textAlign:"left"},children:"多语种支持"}),w.jsx($n,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"同传译梦支持40个国家的语言，覆盖全球主要语言和地区性语言。 无论是英语、法语、德语、西班牙语、中文、日语、韩语，还是阿拉伯语、俄语等， 同传译梦都能提供准确流畅的翻译，让全球沟通变得轻松自如。"})]})]})]})}),w.jsx(L0,{children:w.jsxs(dc,{children:[w.jsx(ua,{children:"主要功能"}),w.jsxs(US,{children:[w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"会议同传"}),w.jsx($n,{children:"为多语言会议提供实时翻译服务，支持多人同时参与，每个参与者都能听到自己语言的翻译内容，让国际会议沟通无障碍。"})]}),w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"语音翻译"}),w.jsx($n,{children:"实时捕捉语音内容并转换为目标语言，保留原始语调和情感特征，使交流更加自然流畅，适用于面对面交谈和远程通话。"})]}),w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"演讲翻译"}),w.jsx($n,{children:"为演讲、讲座、培训等场合提供实时字幕和语音翻译，帮助听众即时理解内容，提升国际活动的参与体验。"})]}),w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"旅行助手"}),w.jsx($n,{children:"支持离线模式，无需网络也能在国外旅行时进行基本沟通。内置常用旅行短语和场景对话，帮助快速应对各种旅行情况。"})]}),w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"多端同步"}),w.jsx($n,{children:"支持在手机、平板、电脑等多种设备上同步使用，随时随地满足翻译需求，适应不同场景下的使用习惯。"})]}),w.jsxs(qr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(Zr,{children:"专业术语"}),w.jsx($n,{children:"内置医疗、法律、技术、金融等多个专业领域的术语库，确保在专业场合下翻译的准确性和专业性，满足不同行业的需求。"})]})]})]})})]})},KS=I.section`
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -1399,7 +1399,7 @@ to {
     background: radial-gradient(circle at center, rgba(124, 58, 237, 0.1) 0%, rgba(5, 5, 5, 1) 70%);
     z-index: 0;
   }
-`,Y2=I(X.div)`
+`,YS=I(X.div)`
   text-align: center;
   z-index: 1;
   max-width: 1000px;
@@ -1408,7 +1408,7 @@ to {
   @media (max-width: 768px) {
     padding-top: 2rem;
   }
-`,G2=I(X.h1)`
+`,GS=I(X.h1)`
   font-size: 4rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
@@ -1419,7 +1419,7 @@ to {
   @media (max-width: 768px) {
     font-size: 2.8rem;
   }
-`,X2=I(X.p)`
+`,XS=I(X.p)`
   font-size: 1.5rem;
   color: ${({theme:t})=>t.colors.text};
   max-width: 800px;
@@ -1456,7 +1456,7 @@ to {
   @media (max-width: 768px) {
     font-size: 2rem;
   }
-`,Q2=I.div`
+`,QS=I.div`
   font-size: 1.2rem;
   line-height: 1.7;
   color: ${({theme:t})=>t.colors.text};
@@ -1469,7 +1469,7 @@ to {
   @media (max-width: 768px) {
     font-size: 1.1rem;
   }
-`,q2=I.div`
+`,qS=I.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2.5rem;
@@ -1504,7 +1504,7 @@ to {
   color: ${({theme:t})=>t.colors.text};
   opacity: 0.9;
   flex-grow: 1;
-`,Z2=I.section`
+`,ZS=I.section`
   padding: 80px 20px;
   background: ${({theme:t})=>t.colors.background};
   position: relative;
@@ -1567,7 +1567,7 @@ to {
     );
     pointer-events: none;
   }
-`,J2=()=>{const t={hidden:{y:20,opacity:0},visible:{y:0,opacity:1,transition:{type:"spring",stiffness:300,damping:20}}};return w.jsxs(w.Fragment,{children:[w.jsx(K2,{children:w.jsxs(Y2,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.8},children:[w.jsx(G2,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.4},children:"泡泡筋斗云"}),w.jsx(X2,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.6},children:"支持40国语言超快速翻译，突破语言障碍，实现即时无缝的跨语言交流"})]})}),w.jsx($0,{children:w.jsxs(fc,{children:[w.jsx(la,{children:"筋斗云是什么？"}),w.jsx(Q2,{children:"泡泡筋斗云是一款高效的多语言翻译工具，覆盖全球40个国家的主要语言，翻译速度极快且准确度高。 无论是日常对话、商务交流、学术研究还是旅行需求，筋斗云都能提供准确、流畅的翻译服务， 帮助用户轻松跨越语言障碍，与世界各地的人们无障碍沟通。"})]})}),w.jsx(Z2,{children:w.jsxs(fc,{children:[w.jsxs(z0,{children:[w.jsxs(O0,{children:[w.jsx(la,{style:{textAlign:"left"},children:"超快翻译速度"}),w.jsx(zn,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"筋斗云采用先进的神经网络翻译技术，翻译速度比传统翻译工具快数倍。无论是短句还是长篇文档， 都能在极短时间内完成高质量翻译，让您在国际交流中不再有等待的困扰，实现即时无缝的跨语言沟通。"})]}),w.jsx(U0,{children:w.jsx(W0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[-1,1,-1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/appindex.png",alt:"筋斗云翻译界面"})})})]}),w.jsxs(z0,{children:[w.jsx(U0,{children:w.jsx(W0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[1,-1,1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/jindouyun.png",alt:"筋斗云多语言支持"})})}),w.jsxs(O0,{children:[w.jsx(la,{style:{textAlign:"left"},children:"40国语言支持"}),w.jsx(zn,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"筋斗云支持全球40个国家的主要语言，包括英语、法语、德语、西班牙语、俄语、 日语、韩语、阿拉伯语等。无论您身处何地，面对何种语言环境，筋斗云都能为您 提供精准的翻译服务，让全球沟通变得简单自然。"})]})]})]})}),w.jsx($0,{children:w.jsxs(fc,{children:[w.jsx(la,{children:"主要功能"}),w.jsxs(q2,{children:[w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"文本翻译"}),w.jsx(zn,{children:"支持多种语言之间的文本翻译，保留原文格式和语义，提供准确流畅的翻译结果。适用于各类文档、邮件、聊天消息等文本内容。"})]}),w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"语音翻译"}),w.jsx(zn,{children:"将语音实时转换为其他语言，支持多种口音和方言识别，准确捕捉语音内容并快速翻译，适合面对面交流和电话会议。"})]}),w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"图像翻译"}),w.jsx(zn,{children:"识别图片中的文字并进行翻译，支持多种图片格式，适用于菜单、路标、说明书等场景，让旅行和日常生活更便捷。"})]}),w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"文档翻译"}),w.jsx(zn,{children:"批量处理各类文档，包括Word、PDF、PowerPoint等格式，保留原始排版和格式，适合商务和学术交流场景。"})]}),w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"离线翻译"}),w.jsx(zn,{children:"支持下载语言包进行离线翻译，无需网络也能使用核心功能，适合国际旅行和网络受限的环境，随时随地满足翻译需求。"})]}),w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"专业词汇"}),w.jsx(zn,{children:"内置多个领域的专业词汇库，包括医学、法律、工程、金融等，确保专业术语的准确翻译，满足不同行业的专业需求。"})]})]})]})})]})},e4=I(X.div)`
+`,JS=()=>{const t={hidden:{y:20,opacity:0},visible:{y:0,opacity:1,transition:{type:"spring",stiffness:300,damping:20}}};return w.jsxs(w.Fragment,{children:[w.jsx(KS,{children:w.jsxs(YS,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.8},children:[w.jsx(GS,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.4},children:"泡泡筋斗云"}),w.jsx(XS,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.5,delay:.6},children:"支持40国语言超快速翻译，突破语言障碍，实现即时无缝的跨语言交流"})]})}),w.jsx($0,{children:w.jsxs(fc,{children:[w.jsx(la,{children:"筋斗云是什么？"}),w.jsx(QS,{children:"泡泡筋斗云是一款高效的多语言翻译工具，覆盖全球40个国家的主要语言，翻译速度极快且准确度高。 无论是日常对话、商务交流、学术研究还是旅行需求，筋斗云都能提供准确、流畅的翻译服务， 帮助用户轻松跨越语言障碍，与世界各地的人们无障碍沟通。"})]})}),w.jsx(ZS,{children:w.jsxs(fc,{children:[w.jsxs(z0,{children:[w.jsxs(O0,{children:[w.jsx(la,{style:{textAlign:"left"},children:"超快翻译速度"}),w.jsx(zn,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"筋斗云采用先进的神经网络翻译技术，翻译速度比传统翻译工具快数倍。无论是短句还是长篇文档， 都能在极短时间内完成高质量翻译，让您在国际交流中不再有等待的困扰，实现即时无缝的跨语言沟通。"})]}),w.jsx(U0,{children:w.jsx(W0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[-1,1,-1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/appindex.png",alt:"筋斗云翻译界面"})})})]}),w.jsxs(z0,{children:[w.jsx(U0,{children:w.jsx(W0,{initial:{opacity:0,scale:.8},whileInView:{opacity:1,scale:1,transition:{type:"spring",duration:1,bounce:.4}},animate:{y:[0,-10,0],rotateZ:[1,-1,1]},transition:{duration:6,repeat:1/0,ease:"easeInOut"},viewport:{once:!0},children:w.jsx("img",{src:"/WuKonWeb4/assets/jindouyun.png",alt:"筋斗云多语言支持"})})}),w.jsxs(O0,{children:[w.jsx(la,{style:{textAlign:"left"},children:"40国语言支持"}),w.jsx(zn,{style:{fontSize:"1.2rem",marginBottom:"2rem"},children:"筋斗云支持全球40个国家的主要语言，包括英语、法语、德语、西班牙语、俄语、 日语、韩语、阿拉伯语等。无论您身处何地，面对何种语言环境，筋斗云都能为您 提供精准的翻译服务，让全球沟通变得简单自然。"})]})]})]})}),w.jsx($0,{children:w.jsxs(fc,{children:[w.jsx(la,{children:"主要功能"}),w.jsxs(qS,{children:[w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"文本翻译"}),w.jsx(zn,{children:"支持多种语言之间的文本翻译，保留原文格式和语义，提供准确流畅的翻译结果。适用于各类文档、邮件、聊天消息等文本内容。"})]}),w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"语音翻译"}),w.jsx(zn,{children:"将语音实时转换为其他语言，支持多种口音和方言识别，准确捕捉语音内容并快速翻译，适合面对面交流和电话会议。"})]}),w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"图像翻译"}),w.jsx(zn,{children:"识别图片中的文字并进行翻译，支持多种图片格式，适用于菜单、路标、说明书等场景，让旅行和日常生活更便捷。"})]}),w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"文档翻译"}),w.jsx(zn,{children:"批量处理各类文档，包括Word、PDF、PowerPoint等格式，保留原始排版和格式，适合商务和学术交流场景。"})]}),w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"离线翻译"}),w.jsx(zn,{children:"支持下载语言包进行离线翻译，无需网络也能使用核心功能，适合国际旅行和网络受限的环境，随时随地满足翻译需求。"})]}),w.jsxs(Jr,{as:X.div,variants:t,whileHover:{scale:1.03},children:[w.jsx(ei,{children:"专业词汇"}),w.jsx(zn,{children:"内置多个领域的专业词汇库，包括医学、法律、工程、金融等，确保专业术语的准确翻译，满足不同行业的专业需求。"})]})]})]})})]})},e4=I(X.div)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1638,7 +1638,7 @@ to {
   }
 `,r4=I(X.span)`
   position: absolute;
-  bottom: -70px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
@@ -1654,8 +1654,11 @@ to {
   }
 
   @media (max-width: 768px) {
-    bottom: -60px;
-    font-size: 0.8rem;
+    bottom: -25px;
+    font-size: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2px 6px;
+    border-radius: 4px;
   }
 `,H0={initial:{y:0},animate:{y:[-3,3,-3],transition:{duration:3,repeat:1/0,ease:"easeInOut"}}},i4=()=>{const t=Yt(),r=Na(),i=C.useRef(null),[s,u]=C.useState(0),[l,d]=C.useState(!1),f=[{icon:"/WuKonWeb4/assets/logo.png",label:"首页",path:"/"},{icon:"/WuKonWeb4/assets/jindouyun.png",label:"泡泡筋斗云",path:"/jindouyun"},{icon:"/WuKonWeb4/assets/pingxingyuzhou.png",label:"泡泡平行宇宙",path:"/parallel"},{icon:"/WuKonWeb4/assets/tongchuanyimeng.png",label:"泡泡同传译梦",path:"/interpreter"}],h=g=>g==="/"&&t.pathname==="/"?!0:t.pathname===g;C.useEffect(()=>{const g=f.findIndex(v=>h(v.path));u(g>=0?g:0)},[t.pathname]);const m=(g,v)=>x=>{x.preventDefault(),l||(d(!0),u(v),g!==t.pathname&&r(g),setTimeout(()=>{d(!1)},600))};return w.jsx(e4,{ref:i,children:w.jsx(Oa,{children:f.map((g,v)=>w.jsx(t4,{className:"nav-item",initial:{opacity:0},animate:{opacity:1},transition:{duration:.5},style:{willChange:"transform"},children:w.jsx(n4,{onClick:m(g.path,v),children:w.jsx(f1,{$isActive:h(g.path),children:w.jsxs(X.div,{initial:H0.initial,animate:H0.animate,children:[w.jsx("img",{src:g.icon,alt:g.label}),w.jsx(r4,{children:g.label})]})})})},g.path))})})};class o4{constructor(){this.USERS_KEY="app_users",this.CODES_KEY="verification_codes",this.CODE_EXPIRY=5*60*1e3,this.SECRET_ID="你的SecretId",this.SECRET_KEY="你的SecretKey",this.SDK_APP_ID="你的SmsSdkAppId",this.TEMPLATE_ID="你的模板ID",this.SIGN_NAME="你的短信签名",this.initTestUsers()}initTestUsers(){this.getUsers().length===0&&this.saveUsers([{username:"test",password:"123456",phone:"13800138000",email:"test@example.com"},{username:"admin",password:"admin123",phone:"13900139000",email:"admin@example.com"}])}getUsers(){const r=localStorage.getItem(this.USERS_KEY);return r?JSON.parse(r):[]}saveUsers(r){localStorage.setItem(this.USERS_KEY,JSON.stringify(r))}getCodes(){const r=localStorage.getItem(this.CODES_KEY);return r?JSON.parse(r):[]}saveCodes(r){localStorage.setItem(this.CODES_KEY,JSON.stringify(r))}async sendVerificationCode(r){const i=Math.floor(1e5+Math.random()*9e5).toString(),u=this.getCodes().filter(l=>l.expiry>Date.now());try{return console.log(`向手机号 ${r} 发送验证码: ${i}`),u.push({phone:r,code:i,expiry:Date.now()+this.CODE_EXPIRY}),this.saveCodes(u),Promise.resolve()}catch(l){throw console.error("发送验证码错误:",l),new Error("发送验证码失败，请稍后重试")}}verifyCode(r,i){return!!this.getCodes().find(l=>l.phone===r&&l.code===i&&l.expiry>Date.now())}register(r,i,s,u){const l=this.getUsers();if(l.some(d=>d.username===i))throw new Error("该用户名已被注册");if(r&&l.some(d=>d.email===r))throw new Error("该邮箱已被注册");if(u&&l.some(d=>d.phone===u))throw new Error("该手机号已被注册");return l.push({email:r,username:i,password:s,phone:u}),this.saveUsers(l),!0}login(r,i){const u=this.getUsers().find(l=>(l.username===r||l.email===r||l.phone===r)&&l.password===i);if(!u)throw new Error("用户名或密码错误");return u}loginWithPhone(r,i){if(!this.verifyCode(r,i))throw new Error("验证码错误或已过期");const u=this.getUsers().find(l=>l.phone===r);if(!u){const l=`user_${Date.now().toString().slice(-6)}`;return this.register(null,l,"",r),this.getUsers().find(d=>d.phone===r)}return u}}const pc=new o4,s4=I.section`
   min-height: 100vh;
@@ -1848,4 +1851,4 @@ to {
   @media (max-width: 768px) {
     top: 35%;
   }
-`,g4=()=>{const t=Yt(),[r,i]=C.useState(!0),[s,u]=C.useState("up"),[l,d]=C.useState(0),f=t.pathname==="/login",h=(m,g)=>{let v=0;return(...x)=>{const E=new Date().getTime();if(!(E-v<g))return v=E,m(...x)}};return C.useEffect(()=>{const m=()=>{const v=window.scrollY;v<100||v<l?(u("up"),i(!0)):(u("down"),i(!1)),d(v)};if(f){i(!1);return}const g=h(m,100);return window.addEventListener("scroll",g),()=>window.removeEventListener("scroll",g)},[l,f]),C.useEffect(()=>{window.scrollTo({top:0,behavior:"smooth"}),i(!f)},[t.pathname,f]),w.jsxs(w.Fragment,{children:[!f&&w.jsx(m4,{$isVisible:r,children:w.jsx(i4,{})}),w.jsx(Oa,{mode:"wait",children:w.jsxs(p5,{location:t,children:[w.jsx(dr,{path:"/",element:w.jsxs(co,{children:[w.jsxs("main",{children:[w.jsx(OF,{}),w.jsx(A2,{}),w.jsx(qF,{}),w.jsx(sS,{}),w.jsx(wS,{}),w.jsx(kS,{})]}),w.jsx(lo,{}),w.jsx(pr,{})]})}),w.jsx(dr,{path:"/login",element:w.jsxs(co,{children:[w.jsx("main",{children:w.jsx(p4,{})}),w.jsx(lo,{}),w.jsx(pr,{})]})}),w.jsx(dr,{path:"/jindouyun",element:w.jsxs(co,{children:[w.jsx("main",{children:w.jsx(J2,{})}),w.jsx(lo,{}),w.jsx(pr,{})]})}),w.jsx(dr,{path:"/parallel",element:w.jsxs(co,{children:[w.jsx("main",{children:w.jsx(V2,{})}),w.jsx(lo,{}),w.jsx(pr,{})]})}),w.jsx(dr,{path:"/interpreter",element:w.jsxs(co,{children:[w.jsx("main",{children:w.jsx(H2,{})}),w.jsx(lo,{}),w.jsx(pr,{})]})}),w.jsx(dr,{path:"*",element:w.jsx(d5,{to:"/",replace:!0})})]},t.pathname)})]})};function y4(){return w.jsxs(yw,{theme:Cw,children:[w.jsx(Ew,{}),w.jsx(y2,{position:"top-center"}),w.jsxs(V5,{basename:"/WuKonWeb4",children:[w.jsx(Ud,{}),w.jsx(g4,{})]})]})}vx.createRoot(document.getElementById("root")).render(w.jsx(C.StrictMode,{children:w.jsx(y4,{})}));
+`,g4=()=>{const t=Yt(),[r,i]=C.useState(!0),[s,u]=C.useState("up"),[l,d]=C.useState(0),f=t.pathname==="/login",h=(m,g)=>{let v=0;return(...x)=>{const E=new Date().getTime();if(!(E-v<g))return v=E,m(...x)}};return C.useEffect(()=>{const m=()=>{const v=window.scrollY;v<100||v<l?(u("up"),i(!0)):(u("down"),i(!1)),d(v)};if(f){i(!1);return}const g=h(m,100);return window.addEventListener("scroll",g),()=>window.removeEventListener("scroll",g)},[l,f]),C.useEffect(()=>{window.scrollTo({top:0,behavior:"smooth"}),i(!f)},[t.pathname,f]),w.jsxs(w.Fragment,{children:[!f&&w.jsx(m4,{$isVisible:r,children:w.jsx(i4,{})}),w.jsx(Oa,{mode:"wait",children:w.jsxs(p5,{location:t,children:[w.jsx(dr,{path:"/",element:w.jsxs(co,{children:[w.jsxs("main",{children:[w.jsx(OF,{}),w.jsx(AS,{}),w.jsx(qF,{}),w.jsx(s2,{}),w.jsx(w2,{}),w.jsx(k2,{})]}),w.jsx(lo,{}),w.jsx(pr,{})]})}),w.jsx(dr,{path:"/login",element:w.jsxs(co,{children:[w.jsx("main",{children:w.jsx(p4,{})}),w.jsx(lo,{}),w.jsx(pr,{})]})}),w.jsx(dr,{path:"/jindouyun",element:w.jsxs(co,{children:[w.jsx("main",{children:w.jsx(JS,{})}),w.jsx(lo,{}),w.jsx(pr,{})]})}),w.jsx(dr,{path:"/parallel",element:w.jsxs(co,{children:[w.jsx("main",{children:w.jsx(VS,{})}),w.jsx(lo,{}),w.jsx(pr,{})]})}),w.jsx(dr,{path:"/interpreter",element:w.jsxs(co,{children:[w.jsx("main",{children:w.jsx(HS,{})}),w.jsx(lo,{}),w.jsx(pr,{})]})}),w.jsx(dr,{path:"*",element:w.jsx(d5,{to:"/",replace:!0})})]},t.pathname)})]})};function y4(){const t=()=>{if(window.location.hostname==="localhost")return"/WuKonWeb4";const r=window.location.pathname.split("/");return r.length>1&&r[1]==="WuKonWeb4"?"/WuKonWeb4":"/"};return w.jsxs(yw,{theme:Cw,children:[w.jsx(Ew,{}),w.jsx(yS,{position:"top-center"}),w.jsxs(V5,{basename:t(),children:[w.jsx(Ud,{}),w.jsx(g4,{})]})]})}vx.createRoot(document.getElementById("root")).render(w.jsx(C.StrictMode,{children:w.jsx(y4,{})}));
